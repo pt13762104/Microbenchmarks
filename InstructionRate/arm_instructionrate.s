@@ -131,7 +131,7 @@
 
 .balign 4
 
-/* x0 = arg = iteration count. all iteration counts must be divisible by 32 (current ones doesn't work sadly) */
+/* x0 = arg = iteration count. all iteration counts must be a divisor of 15360 (32, 30, etc. Prefer 32 or 48 instructions.) */
 _clktest:
 clktest:
   sub sp, sp, #0x30

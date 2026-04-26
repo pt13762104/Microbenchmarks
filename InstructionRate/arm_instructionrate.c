@@ -130,7 +130,7 @@ cpu_set_t cpuset;
 int main(int argc, char *argv[]) {
   struct timeval startTv, endTv;
   struct timezone startTz, endTz;
-  uint64_t iterations = 1638400000;
+  uint64_t iterations = 1536000000;
   uint64_t iterationsHigh = iterations * 5;
   uint64_t time_diff_ms;
   float latency, opsPerNs, clockSpeedGhz;
