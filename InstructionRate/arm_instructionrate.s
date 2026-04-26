@@ -294,6 +294,7 @@ addtest_loop:
   add x27,x27,x15
   add x28,x28,x15
   add x29,x29,x15
+  sub x0, x0, x14
   cbnz x0, addtest_loop
   ldp x12, x13, [sp, #0x90]
   ldp x28, x29, [sp, #0x80]
