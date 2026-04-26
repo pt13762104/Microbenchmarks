@@ -242,7 +242,7 @@ addtest:
   stp x24, x25, [sp, #0x60]
   stp x26, x27, [sp, #0x70]
   stp x28, x29, [sp, #0x80]
-  stp x30, x31, [sp, #0x90]
+  stp x12, x13, [sp, #0x90]
   mov x15, 1
   mov x14, 32
   eor x16,x16,x16
@@ -259,9 +259,11 @@ addtest:
   eor x27,x27,x27
   eor x28,x28,x28
   eor x29,x29,x29
-  eor x30,x30,x30
-  eor x31,x31,x31
+  eor x12,x12,x12
+  eor x13,x13,x13
 addtest_loop:
+  add x12,x12,x15
+  add x13,x13,x15
   add x16,x16,x15
   add x17,x17,x15
   add x18,x18,x15
@@ -276,8 +278,8 @@ addtest_loop:
   add x27,x27,x15
   add x28,x28,x15
   add x29,x29,x15
-  add x30,x30,x15
-  add x31,x31,x15
+  add x12,x12,x15
+  add x13,x13,x15
   add x16,x16,x15
   add x17,x17,x15
   add x18,x18,x15
@@ -292,10 +294,8 @@ addtest_loop:
   add x27,x27,x15
   add x28,x28,x15
   add x29,x29,x15
-  add x30,x30,x15
-  add x31,x31,x15
   cbnz x0, addtest_loop
-  ldp x30, x31, [sp, #0x90]
+  ldp x12, x13, [sp, #0x90]
   ldp x28, x29, [sp, #0x80]
   ldp x26, x27, [sp, #0x70]
   ldp x24, x25, [sp, #0x60]
