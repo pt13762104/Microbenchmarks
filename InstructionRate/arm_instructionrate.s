@@ -233,54 +233,76 @@ noptest_loop:
 
 _addtest:
 addtest:
-  sub sp, sp, #0x50
+  sub sp, sp, #0x100
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x30, x31, [sp, #0x90]
   mov x15, 1
-  mov x14, 30
-  eor x13, x13, x13
-  eor x12, x12, x12
-  eor x11, x11, x11
-  eor x10, x10, x10
-  eor x9, x9, x9
+  mov x14, 32
+  eor x16,x16,x16
+  eor x17,x17,x17
+  eor x18,x18,x18
+  eor x19,x19,x19
+  eor x20,x20,x20
+  eor x21,x21,x21
+  eor x22,x22,x22
+  eor x23,x23,x23
+  eor x24,x24,x24
+  eor x25,x25,x25
+  eor x26,x26,x26
+  eor x27,x27,x27
+  eor x28,x28,x28
+  eor x29,x29,x29
+  eor x30,x30,x30
+  eor x31,x31,x31
 addtest_loop:
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add x9, x9, x15
-  sub x0, x0, x14
+  add x16,x16,x15
+  add x17,x17,x15
+  add x18,x18,x15
+  add x19,x19,x15
+  add x20,x20,x15
+  add x21,x21,x15
+  add x22,x22,x15
+  add x23,x23,x15
+  add x24,x24,x15
+  add x25,x25,x15
+  add x26,x26,x15
+  add x27,x27,x15
+  add x28,x28,x15
+  add x29,x29,x15
+  add x30,x30,x15
+  add x31,x31,x15
+  add x16,x16,x15
+  add x17,x17,x15
+  add x18,x18,x15
+  add x19,x19,x15
+  add x20,x20,x15
+  add x21,x21,x15
+  add x22,x22,x15
+  add x23,x23,x15
+  add x24,x24,x15
+  add x25,x25,x15
+  add x26,x26,x15
+  add x27,x27,x15
+  add x28,x28,x15
+  add x29,x29,x15
+  add x30,x30,x15
+  add x31,x31,x15
   cbnz x0, addtest_loop
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x30, x31, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
   add sp, sp, #0x50
   ret 
