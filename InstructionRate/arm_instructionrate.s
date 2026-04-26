@@ -304,7 +304,7 @@ addtest_loop:
   ldp x18, x19, [sp, #0x30]
   ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0x100
   ret 
 
 _maddaddtest:
