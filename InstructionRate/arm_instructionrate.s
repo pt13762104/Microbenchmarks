@@ -131,7 +131,7 @@
 
 .balign 4
 
-/* x0 = arg = iteration count. all iteration counts must be divisible by 16 (unfinished) */
+/* x0 = arg = iteration count. all iteration counts must be divisible by 32 (current ones doesn't work sadly) */
 _clktest:
 clktest:
   sub sp, sp, #0x30
@@ -186,9 +186,12 @@ noptest:
   stp x14, x15, [sp, #0x10]
   stp x12, x13, [sp, #0x20]
   mov x15, 1
-  mov x14, 30
+  mov x14, 32
   eor x13, x13, x13
 noptest_loop:
+  nop
+  nop
+
   nop
   nop
   nop
