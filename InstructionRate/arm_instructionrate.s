@@ -131,16 +131,28 @@
 
 .balign 4
 
-/* x0 = arg = iteration count. all iteration counts must be divisible by 10 */
+/* x0 = arg = iteration count. all iteration counts must be divisible by 16 (unfinished) */
 _clktest:
 clktest:
   sub sp, sp, #0x30
   stp x14, x15, [sp, #0x10]
   stp x12, x13, [sp, #0x20]
   mov x15, 1
-  mov x14, 20
+  mov x14, 32
   eor x13, x13, x13
 clktest_loop:
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
+  add x13, x13, x15
   add x13, x13, x15
   add x13, x13, x15
   add x13, x13, x15
