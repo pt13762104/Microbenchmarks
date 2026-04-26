@@ -233,7 +233,7 @@ noptest_loop:
 
 _addtest:
 addtest:
-  sub sp, sp, #0x100
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
   stp x16, x17, [sp, #0x20]
   stp x18, x19, [sp, #0x30]
@@ -304,7 +304,7 @@ addtest_loop:
   ldp x18, x19, [sp, #0x30]
   ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x100
+  add sp, sp, #0xa0
   ret 
 
 _maddaddtest:
