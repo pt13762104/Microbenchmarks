@@ -1985,29 +1985,29 @@ mixaddvecadd128test:
   ldr q22, [x1]
   ldr q23, [x1]
 mixaddvecadd128test_loop:
-  add x13, x13, x15
-  add x12, x12, x15
+  add x13, x13, x13
+  add x12, x12, x12
   add v16.4s, v16.4s, v16.4s
-  add x11, x11, x15
-  add x10, x10, x15
+  add x11, x11, x11
+  add x10, x10, x10
   add v17.4s, v17.4s, v17.4s
-  add x13, x13, x15
-  add x12, x12, x15
+  add x13, x13, x13
+  add x12, x12, x12
   add v18.4s, v18.4s, v18.4s
-  add x11, x11, x15
-  add x10, x10, x15
+  add x11, x11, x11
+  add x10, x10, x10
   add v19.4s, v19.4s, v19.4s
-  add x13, x13, x15
-  add x12, x12, x15
+  add x13, x13, x13
+  add x12, x12, x12
   add v20.4s, v20.4s, v20.4s
-  add x11, x11, x15
-  add x10, x10, x15
+  add x11, x11, x11
+  add x10, x10, x10
   add v21.4s, v21.4s, v21.4s
-  add x13, x13, x15
-  add x12, x12, x15
+  add x13, x13, x13
+  add x12, x12, x12
   add v22.4s, v22.4s, v22.4s
-  add x11, x11, x15
-  add x10, x10, x15
+  add x11, x11, x11
+  add x10, x10, x10
   add v23.4s, v23.4s, v23.4s
   sub x0, x0, x14
   cbnz x0, mixaddvecadd128test_loop
