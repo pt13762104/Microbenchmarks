@@ -808,34 +808,72 @@ _faddtest:
 faddtest:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
-  ldr s16, [x1]
-  ldr s17, [x1, #0x4]
-  ldr s18, [x1, #0x8]
-  ldr s19, [x1, #0xC]
-  ldr s20, [x1]
-  ldr s21, [x1, #0x4]
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
+  ldr q16, [x1]
+  ldr q17, [x1]
+  ldr q18, [x1]
+  ldr q19, [x1]
+  ldr q20, [x1]
+  ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 faddtest_loop:
-  fadd s16, s16, s16
-  fadd s17, s17, s17
-  fadd s18, s18, s18
-  fadd s19, s19, s19
-  fadd s20, s20, s20
-  fadd s21, s21, s21
-  fadd s16, s16, s16
-  fadd s17, s17, s17
-  fadd s18, s18, s18
-  fadd s19, s19, s19
-  fadd s20, s20, s20
-  fadd s21, s21, s21
-  fadd s16, s16, s16
-  fadd s17, s17, s17
-  fadd s18, s18, s18
-  fadd s19, s19, s19
-  fadd s20, s20, s20
-  fadd s21, s21, s21
-  fadd s16, s16, s16
-  fadd s17, s17, s17
+  fadd s0,s0,s0
+  fadd s1,s1,s1
+  fadd s2,s2,s2
+  fadd s3,s3,s3
+  fadd s4,s4,s4
+  fadd s5,s5,s5
+  fadd s6,s6,s6
+  fadd s7,s7,s7
+  fadd s8,s8,s8
+  fadd s9,s9,s9
+  fadd s10,s10,s10
+  fadd s11,s11,s11
+  fadd s12,s12,s12
+  fadd s13,s13,s13
+  fadd s14,s14,s14
+  fadd s15,s15,s15
+  fadd s16,s16,s16
+  fadd s17,s17,s17
+  fadd s18,s18,s18
+  fadd s19,s19,s19
+  fadd s20,s20,s20
+  fadd s21,s21,s21
+  fadd s22,s22,s22
+  fadd s23,s23,s23
+  fadd s24,s24,s24
+  fadd s25,s25,s25
+  fadd s26,s26,s26
+  fadd s27,s27,s27
+  fadd s28,s28,s28
+  fadd s29,s29,s29
+  fadd s30,s30,s30
+  fadd s31,s31,s31
   sub x0, x0, x14
   cbnz x0, faddtest_loop
   ldp x14, x15, [sp, #0x10]
@@ -945,34 +983,72 @@ _vecmul128test:
 vecmul128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
   ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecmul128test_loop:
-  mul v16.4s, v16.4s, v16.4s
-  mul v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  mul v19.4s, v19.4s, v19.4s
-  mul v20.4s, v20.4s, v20.4s
-  mul v21.4s, v21.4s, v21.4s
-  mul v16.4s, v16.4s, v16.4s
-  mul v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  mul v19.4s, v19.4s, v19.4s
-  mul v20.4s, v20.4s, v20.4s
-  mul v21.4s, v21.4s, v21.4s
-  mul v16.4s, v16.4s, v16.4s
-  mul v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  mul v19.4s, v19.4s, v19.4s
-  mul v20.4s, v20.4s, v20.4s
-  mul v21.4s, v21.4s, v21.4s
-  mul v16.4s, v16.4s, v16.4s
-  mul v17.4s, v17.4s, v17.4s
+  mul v0.4s,v0.4s,v0.4s
+  mul v1.4s,v1.4s,v1.4s
+  mul v2.4s,v2.4s,v2.4s
+  mul v3.4s,v3.4s,v3.4s
+  mul v4.4s,v4.4s,v4.4s
+  mul v5.4s,v5.4s,v5.4s
+  mul v6.4s,v6.4s,v6.4s
+  mul v7.4s,v7.4s,v7.4s
+  mul v8.4s,v8.4s,v8.4s
+  mul v9.4s,v9.4s,v9.4s
+  mul v10.4s,v10.4s,v10.4s
+  mul v11.4s,v11.4s,v11.4s
+  mul v12.4s,v12.4s,v12.4s
+  mul v13.4s,v13.4s,v13.4s
+  mul v14.4s,v14.4s,v14.4s
+  mul v15.4s,v15.4s,v15.4s
+  mul v16.4s,v16.4s,v16.4s
+  mul v17.4s,v17.4s,v17.4s
+  mul v18.4s,v18.4s,v18.4s
+  mul v19.4s,v19.4s,v19.4s
+  mul v20.4s,v20.4s,v20.4s
+  mul v21.4s,v21.4s,v21.4s
+  mul v22.4s,v22.4s,v22.4s
+  mul v23.4s,v23.4s,v23.4s
+  mul v24.4s,v24.4s,v24.4s
+  mul v25.4s,v25.4s,v25.4s
+  mul v26.4s,v26.4s,v26.4s
+  mul v27.4s,v27.4s,v27.4s
+  mul v28.4s,v28.4s,v28.4s
+  mul v29.4s,v29.4s,v29.4s
+  mul v30.4s,v30.4s,v30.4s
+  mul v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, vecmul128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1743,7 +1819,23 @@ _mixvecaddmul128test:
 mixvecaddmul128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -1752,27 +1844,79 @@ mixvecaddmul128test:
   ldr q21, [x1]
   ldr q22, [x1]
   ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 mixvecaddmul128test_loop:
-  mul v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  mul v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  mul v22.4s, v22.4s, v22.4s
-  add v23.4s, v23.4s, v23.4s
-  mul v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  mul v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  mul v22.4s, v22.4s, v22.4s
-  add v23.4s, v23.4s, v23.4s
-  mul v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  mul v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
+  add v0.4s,v0.4s,v0.4s
+  add v1.4s,v1.4s,v1.4s
+  add v2.4s,v2.4s,v2.4s
+  add v3.4s,v3.4s,v3.4s
+  add v4.4s,v4.4s,v4.4s
+  add v5.4s,v5.4s,v5.4s
+  add v6.4s,v6.4s,v6.4s
+  add v7.4s,v7.4s,v7.4s
+  add v8.4s,v8.4s,v8.4s
+  add v9.4s,v9.4s,v9.4s
+  add v10.4s,v10.4s,v10.4s
+  add v11.4s,v11.4s,v11.4s
+  add v12.4s,v12.4s,v12.4s
+  add v13.4s,v13.4s,v13.4s
+  add v14.4s,v14.4s,v14.4s
+  add v15.4s,v15.4s,v15.4s
+  add v16.4s,v16.4s,v16.4s
+  add v17.4s,v17.4s,v17.4s
+  add v18.4s,v18.4s,v18.4s
+  add v19.4s,v19.4s,v19.4s
+  add v20.4s,v20.4s,v20.4s
+  add v21.4s,v21.4s,v21.4s
+  add v22.4s,v22.4s,v22.4s
+  add v23.4s,v23.4s,v23.4s
+  add v24.4s,v24.4s,v24.4s
+  add v25.4s,v25.4s,v25.4s
+  add v26.4s,v26.4s,v26.4s
+  add v27.4s,v27.4s,v27.4s
+  add v28.4s,v28.4s,v28.4s
+  add v29.4s,v29.4s,v29.4s
+  add v30.4s,v30.4s,v30.4s
+  add v31.4s,v31.4s,v31.4s
+  mul v0.4s,v0.4s,v0.4s
+  mul v1.4s,v1.4s,v1.4s
+  mul v2.4s,v2.4s,v2.4s
+  mul v3.4s,v3.4s,v3.4s
+  mul v4.4s,v4.4s,v4.4s
+  mul v5.4s,v5.4s,v5.4s
+  mul v6.4s,v6.4s,v6.4s
+  mul v7.4s,v7.4s,v7.4s
+  mul v8.4s,v8.4s,v8.4s
+  mul v9.4s,v9.4s,v9.4s
+  mul v10.4s,v10.4s,v10.4s
+  mul v11.4s,v11.4s,v11.4s
+  mul v12.4s,v12.4s,v12.4s
+  mul v13.4s,v13.4s,v13.4s
+  mul v14.4s,v14.4s,v14.4s
+  mul v15.4s,v15.4s,v15.4s
+  mul v16.4s,v16.4s,v16.4s
+  mul v17.4s,v17.4s,v17.4s
+  mul v18.4s,v18.4s,v18.4s
+  mul v19.4s,v19.4s,v19.4s
+  mul v20.4s,v20.4s,v20.4s
+  mul v21.4s,v21.4s,v21.4s
+  mul v22.4s,v22.4s,v22.4s
+  mul v23.4s,v23.4s,v23.4s
+  mul v24.4s,v24.4s,v24.4s
+  mul v25.4s,v25.4s,v25.4s
+  mul v26.4s,v26.4s,v26.4s
+  mul v27.4s,v27.4s,v27.4s
+  mul v28.4s,v28.4s,v28.4s
+  mul v29.4s,v29.4s,v29.4s
+  mul v30.4s,v30.4s,v30.4s
+  mul v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, mixvecaddmul128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -2214,28 +2358,40 @@ _vecloadtest:
 vecloadtest:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
 vecloadtest_loop:
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
-  ldr q16, [x1]
-  ldr q17, [x1]
-  ldr q18, [x1]
-  ldr q19, [x1]
-  ldr q20, [x1]
-  ldr q16, [x1]
-  ldr q17, [x1]
-  ldr q18, [x1]
-  ldr q19, [x1]
-  ldr q20, [x1]
-  ldr q16, [x1]
-  ldr q17, [x1]
-  ldr q18, [x1]
-  ldr q19, [x1]
-  ldr q20, [x1]
+  ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
   sub x0, x0, x14
   cbnz x0, vecloadtest_loop
   ldp x14, x15, [sp, #0x10]
@@ -2246,33 +2402,72 @@ _vecstoretest:
 vecstoretest:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
+  ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecstoretest_loop:
+  str q0, [x2]
+  str q1, [x2]
+  str q2, [x2]
+  str q3, [x2]
+  str q4, [x2]
+  str q5, [x2]
+  str q6, [x2]
+  str q7, [x2]
+  str q8, [x2]
+  str q9, [x2]
+  str q10, [x2]
+  str q11, [x2]
+  str q12, [x2]
+  str q13, [x2]
+  str q14, [x2]
+  str q15, [x2]
   str q16, [x2]
   str q17, [x2]
   str q18, [x2]
   str q19, [x2]
   str q20, [x2]
-  str q16, [x2]
-  str q17, [x2]
-  str q18, [x2]
-  str q19, [x2]
-  str q20, [x2]
-  str q16, [x2]
-  str q17, [x2]
-  str q18, [x2]
-  str q19, [x2]
-  str q20, [x2]
-  str q16, [x2]
-  str q17, [x2]
-  str q18, [x2]
-  str q19, [x2]
-  str q20, [x2]
+  str q21, [x2]
+  str q22, [x2]
+  str q23, [x2]
+  str q24, [x2]
+  str q25, [x2]
+  str q26, [x2]
+  str q27, [x2]
+  str q28, [x2]
+  str q29, [x2]
+  str q30, [x2]
+  str q31, [x2]
   sub x0, x0, x14
   cbnz x0, vecstoretest_loop
   ldp x14, x15, [sp, #0x10]
