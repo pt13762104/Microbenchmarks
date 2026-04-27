@@ -9,5 +9,6 @@ Current progress (on an Cortex-X2):
 | FMLA/FADD/FMUL | 4            | 2.5          | 4               | 100          | 5/2 = 10/4 = 2.5       |
 | Add/XOR        | 3.88         | 3.44         | 4               | 97           | Unknown                |
 | Mix VAdd/VMul  | 4         | 1.67         | 4          |100          | 5/3 = 1.6; Needs interleaving            |
-| Mix FADD/FMLA  | 3.57         | 2.5          | 4               | 89           | 10/4 = 2.5             |
-| Mix FMUL/FMLA  | 3.78         | 2.5          | 4               | 95           | 10/4 = 2.5             |
+| Mix FADD/FMUL  | 3.80         | 2.5          | 4               | 95           | 10/4 = 2.5; Interleaving helps slightly             |
+| Mix FADD/FMLA  | 3.91         | 2.5          | 4               | 98           | 10/4 = 2.5; Interleaving helps slightly             |
+| Mix FMUL/FMLA  | 3.72         | 2.5          | 4               | 93           | 10/4 = 2.5; Interleaving doesn't help            |
