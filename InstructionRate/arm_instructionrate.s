@@ -983,7 +983,23 @@ _scalarfmatest:
 scalarfmatest:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -994,27 +1010,45 @@ scalarfmatest:
   ldr q23, [x1]
   ldr q24, [x1]
   ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 scalarfmatest_loop:
-  fmadd s16, s16, s16, s16
-  fmadd s17, s17, s17, s17
-  fmadd s18, s18, s18, s18
-  fmadd s19, s19, s19, s19
-  fmadd s20, s20, s20, s20
-  fmadd s21, s21, s21, s21
-  fmadd s22, s22, s22, s22
-  fmadd s23, s23, s23, s23
-  fmadd s24, s24, s24, s24
-  fmadd s25, s25, s25, s25
-  fmadd s16, s16, s16, s16
-  fmadd s17, s17, s17, s17
-  fmadd s18, s18, s18, s18
-  fmadd s19, s19, s19, s19
-  fmadd s20, s20, s20, s20
-  fmadd s21, s21, s21, s21
-  fmadd s22, s22, s22, s22
-  fmadd s23, s23, s23, s23
-  fmadd s24, s24, s24, s24
-  fmadd s25, s25, s25, s25
+  fmadd s0,s0,s0,s0
+  fmadd s1,s1,s1,s1
+  fmadd s2,s2,s2,s2
+  fmadd s3,s3,s3,s3
+  fmadd s4,s4,s4,s4
+  fmadd s5,s5,s5,s5
+  fmadd s6,s6,s6,s6
+  fmadd s7,s7,s7,s7
+  fmadd s8,s8,s8,s8
+  fmadd s9,s9,s9,s9
+  fmadd s10,s10,s10,s10
+  fmadd s11,s11,s11,s11
+  fmadd s12,s12,s12,s12
+  fmadd s13,s13,s13,s13
+  fmadd s14,s14,s14,s14
+  fmadd s15,s15,s15,s15
+  fmadd s16,s16,s16,s16
+  fmadd s17,s17,s17,s17
+  fmadd s18,s18,s18,s18
+  fmadd s19,s19,s19,s19
+  fmadd s20,s20,s20,s20
+  fmadd s21,s21,s21,s21
+  fmadd s22,s22,s22,s22
+  fmadd s23,s23,s23,s23
+  fmadd s24,s24,s24,s24
+  fmadd s25,s25,s25,s25
+  fmadd s26,s26,s26,s26
+  fmadd s27,s27,s27,s27
+  fmadd s28,s28,s28,s28
+  fmadd s29,s29,s29,s29
+  fmadd s30,s30,s30,s30
+  fmadd s31,s31,s31,s31
   sub x0, x0, x14
   cbnz x0, scalarfmatest_loop
   ldp x14, x15, [sp, #0x10]
@@ -1058,7 +1092,23 @@ _vecfma128test:
 vecfma128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -1069,27 +1119,45 @@ vecfma128test:
   ldr q23, [x1]
   ldr q24, [x1]
   ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecfma128test_loop:
-  fmla v16.4s, v16.4s, v16.4s
-  fmla v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fmla v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fmla v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fmla v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fmla v25.4s, v25.4s, v25.4s
-  fmla v16.4s, v16.4s, v16.4s
-  fmla v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fmla v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fmla v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fmla v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fmla v25.4s, v25.4s, v25.4s
+  fmla v0.4s,v0.4s,v0.4s
+  fmla v1.4s,v1.4s,v1.4s
+  fmla v2.4s,v2.4s,v2.4s
+  fmla v3.4s,v3.4s,v3.4s
+  fmla v4.4s,v4.4s,v4.4s
+  fmla v5.4s,v5.4s,v5.4s
+  fmla v6.4s,v6.4s,v6.4s
+  fmla v7.4s,v7.4s,v7.4s
+  fmla v8.4s,v8.4s,v8.4s
+  fmla v9.4s,v9.4s,v9.4s
+  fmla v10.4s,v10.4s,v10.4s
+  fmla v11.4s,v11.4s,v11.4s
+  fmla v12.4s,v12.4s,v12.4s
+  fmla v13.4s,v13.4s,v13.4s
+  fmla v14.4s,v14.4s,v14.4s
+  fmla v15.4s,v15.4s,v15.4s
+  fmla v16.4s,v16.4s,v16.4s
+  fmla v17.4s,v17.4s,v17.4s
+  fmla v18.4s,v18.4s,v18.4s
+  fmla v19.4s,v19.4s,v19.4s
+  fmla v20.4s,v20.4s,v20.4s
+  fmla v21.4s,v21.4s,v21.4s
+  fmla v22.4s,v22.4s,v22.4s
+  fmla v23.4s,v23.4s,v23.4s
+  fmla v24.4s,v24.4s,v24.4s
+  fmla v25.4s,v25.4s,v25.4s
+  fmla v26.4s,v26.4s,v26.4s
+  fmla v27.4s,v27.4s,v27.4s
+  fmla v28.4s,v28.4s,v28.4s
+  fmla v29.4s,v29.4s,v29.4s
+  fmla v30.4s,v30.4s,v30.4s
+  fmla v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, vecfma128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1100,7 +1168,23 @@ _mixvecfmulfma128test:
 mixvecfmulfma128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -1111,27 +1195,77 @@ mixvecfmulfma128test:
   ldr q23, [x1]
   ldr q24, [x1]
   ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 mixvecfmulfma128test_loop:
-  fmla v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fmul v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fmul v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fmul v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fmul v25.4s, v25.4s, v25.4s
-  fmla v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fmul v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fmul v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fmul v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fmul v25.4s, v25.4s, v25.4s
+  fmul v0.4s,v0.4s,v0.4s
+  fmul v1.4s,v1.4s,v1.4s
+  fmul v2.4s,v2.4s,v2.4s
+  fmul v3.4s,v3.4s,v3.4s
+  fmul v4.4s,v4.4s,v4.4s
+  fmul v5.4s,v5.4s,v5.4s
+  fmul v6.4s,v6.4s,v6.4s
+  fmul v7.4s,v7.4s,v7.4s
+  fmul v8.4s,v8.4s,v8.4s
+  fmul v9.4s,v9.4s,v9.4s
+  fmul v10.4s,v10.4s,v10.4s
+  fmul v11.4s,v11.4s,v11.4s
+  fmul v12.4s,v12.4s,v12.4s
+  fmul v13.4s,v13.4s,v13.4s
+  fmul v14.4s,v14.4s,v14.4s
+  fmul v15.4s,v15.4s,v15.4s
+  fmul v16.4s,v16.4s,v16.4s
+  fmul v17.4s,v17.4s,v17.4s
+  fmul v18.4s,v18.4s,v18.4s
+  fmul v19.4s,v19.4s,v19.4s
+  fmul v20.4s,v20.4s,v20.4s
+  fmul v21.4s,v21.4s,v21.4s
+  fmul v22.4s,v22.4s,v22.4s
+  fmul v23.4s,v23.4s,v23.4s
+  fmul v24.4s,v24.4s,v24.4s
+  fmul v25.4s,v25.4s,v25.4s
+  fmul v26.4s,v26.4s,v26.4s
+  fmul v27.4s,v27.4s,v27.4s
+  fmul v28.4s,v28.4s,v28.4s
+  fmul v29.4s,v29.4s,v29.4s
+  fmul v30.4s,v30.4s,v30.4s
+  fmul v31.4s,v31.4s,v31.4s
+  fmla v0.4s,v0.4s,v0.4s
+  fmla v1.4s,v1.4s,v1.4s
+  fmla v2.4s,v2.4s,v2.4s
+  fmla v3.4s,v3.4s,v3.4s
+  fmla v4.4s,v4.4s,v4.4s
+  fmla v5.4s,v5.4s,v5.4s
+  fmla v6.4s,v6.4s,v6.4s
+  fmla v7.4s,v7.4s,v7.4s
+  fmla v8.4s,v8.4s,v8.4s
+  fmla v9.4s,v9.4s,v9.4s
+  fmla v10.4s,v10.4s,v10.4s
+  fmla v11.4s,v11.4s,v11.4s
+  fmla v12.4s,v12.4s,v12.4s
+  fmla v13.4s,v13.4s,v13.4s
+  fmla v14.4s,v14.4s,v14.4s
+  fmla v15.4s,v15.4s,v15.4s
+  fmla v16.4s,v16.4s,v16.4s
+  fmla v17.4s,v17.4s,v17.4s
+  fmla v18.4s,v18.4s,v18.4s
+  fmla v19.4s,v19.4s,v19.4s
+  fmla v20.4s,v20.4s,v20.4s
+  fmla v21.4s,v21.4s,v21.4s
+  fmla v22.4s,v22.4s,v22.4s
+  fmla v23.4s,v23.4s,v23.4s
+  fmla v24.4s,v24.4s,v24.4s
+  fmla v25.4s,v25.4s,v25.4s
+  fmla v26.4s,v26.4s,v26.4s
+  fmla v27.4s,v27.4s,v27.4s
+  fmla v28.4s,v28.4s,v28.4s
+  fmla v29.4s,v29.4s,v29.4s
+  fmla v30.4s,v30.4s,v30.4s
+  fmla v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, mixvecfmulfma128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1142,7 +1276,23 @@ _mixvecfaddfma128test:
 mixvecfaddfma128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -1153,27 +1303,77 @@ mixvecfaddfma128test:
   ldr q23, [x1]
   ldr q24, [x1]
   ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 mixvecfaddfma128test_loop:
-  fmla v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fadd v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fadd v25.4s, v25.4s, v25.4s
-  fmla v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fmla v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fmla v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fmla v22.4s, v22.4s, v22.4s
-  fadd v23.4s, v23.4s, v23.4s
-  fmla v24.4s, v24.4s, v24.4s
-  fadd v25.4s, v25.4s, v25.4s
+  fadd v0.4s,v0.4s,v0.4s
+  fadd v1.4s,v1.4s,v1.4s
+  fadd v2.4s,v2.4s,v2.4s
+  fadd v3.4s,v3.4s,v3.4s
+  fadd v4.4s,v4.4s,v4.4s
+  fadd v5.4s,v5.4s,v5.4s
+  fadd v6.4s,v6.4s,v6.4s
+  fadd v7.4s,v7.4s,v7.4s
+  fadd v8.4s,v8.4s,v8.4s
+  fadd v9.4s,v9.4s,v9.4s
+  fadd v10.4s,v10.4s,v10.4s
+  fadd v11.4s,v11.4s,v11.4s
+  fadd v12.4s,v12.4s,v12.4s
+  fadd v13.4s,v13.4s,v13.4s
+  fadd v14.4s,v14.4s,v14.4s
+  fadd v15.4s,v15.4s,v15.4s
+  fadd v16.4s,v16.4s,v16.4s
+  fadd v17.4s,v17.4s,v17.4s
+  fadd v18.4s,v18.4s,v18.4s
+  fadd v19.4s,v19.4s,v19.4s
+  fadd v20.4s,v20.4s,v20.4s
+  fadd v21.4s,v21.4s,v21.4s
+  fadd v22.4s,v22.4s,v22.4s
+  fadd v23.4s,v23.4s,v23.4s
+  fadd v24.4s,v24.4s,v24.4s
+  fadd v25.4s,v25.4s,v25.4s
+  fadd v26.4s,v26.4s,v26.4s
+  fadd v27.4s,v27.4s,v27.4s
+  fadd v28.4s,v28.4s,v28.4s
+  fadd v29.4s,v29.4s,v29.4s
+  fadd v30.4s,v30.4s,v30.4s
+  fadd v31.4s,v31.4s,v31.4s
+  fmla v0.4s,v0.4s,v0.4s
+  fmla v1.4s,v1.4s,v1.4s
+  fmla v2.4s,v2.4s,v2.4s
+  fmla v3.4s,v3.4s,v3.4s
+  fmla v4.4s,v4.4s,v4.4s
+  fmla v5.4s,v5.4s,v5.4s
+  fmla v6.4s,v6.4s,v6.4s
+  fmla v7.4s,v7.4s,v7.4s
+  fmla v8.4s,v8.4s,v8.4s
+  fmla v9.4s,v9.4s,v9.4s
+  fmla v10.4s,v10.4s,v10.4s
+  fmla v11.4s,v11.4s,v11.4s
+  fmla v12.4s,v12.4s,v12.4s
+  fmla v13.4s,v13.4s,v13.4s
+  fmla v14.4s,v14.4s,v14.4s
+  fmla v15.4s,v15.4s,v15.4s
+  fmla v16.4s,v16.4s,v16.4s
+  fmla v17.4s,v17.4s,v17.4s
+  fmla v18.4s,v18.4s,v18.4s
+  fmla v19.4s,v19.4s,v19.4s
+  fmla v20.4s,v20.4s,v20.4s
+  fmla v21.4s,v21.4s,v21.4s
+  fmla v22.4s,v22.4s,v22.4s
+  fmla v23.4s,v23.4s,v23.4s
+  fmla v24.4s,v24.4s,v24.4s
+  fmla v25.4s,v25.4s,v25.4s
+  fmla v26.4s,v26.4s,v26.4s
+  fmla v27.4s,v27.4s,v27.4s
+  fmla v28.4s,v28.4s,v28.4s
+  fmla v29.4s,v29.4s,v29.4s
+  fmla v30.4s,v30.4s,v30.4s
+  fmla v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, mixvecfaddfma128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1217,34 +1417,72 @@ _vecfadd128test:
 vecfadd128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
   ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecfadd128test_loop:
-  fadd v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
+  fadd v0.4s,v0.4s,v0.4s
+  fadd v1.4s,v1.4s,v1.4s
+  fadd v2.4s,v2.4s,v2.4s
+  fadd v3.4s,v3.4s,v3.4s
+  fadd v4.4s,v4.4s,v4.4s
+  fadd v5.4s,v5.4s,v5.4s
+  fadd v6.4s,v6.4s,v6.4s
+  fadd v7.4s,v7.4s,v7.4s
+  fadd v8.4s,v8.4s,v8.4s
+  fadd v9.4s,v9.4s,v9.4s
+  fadd v10.4s,v10.4s,v10.4s
+  fadd v11.4s,v11.4s,v11.4s
+  fadd v12.4s,v12.4s,v12.4s
+  fadd v13.4s,v13.4s,v13.4s
+  fadd v14.4s,v14.4s,v14.4s
+  fadd v15.4s,v15.4s,v15.4s
+  fadd v16.4s,v16.4s,v16.4s
+  fadd v17.4s,v17.4s,v17.4s
+  fadd v18.4s,v18.4s,v18.4s
+  fadd v19.4s,v19.4s,v19.4s
+  fadd v20.4s,v20.4s,v20.4s
+  fadd v21.4s,v21.4s,v21.4s
+  fadd v22.4s,v22.4s,v22.4s
+  fadd v23.4s,v23.4s,v23.4s
+  fadd v24.4s,v24.4s,v24.4s
+  fadd v25.4s,v25.4s,v25.4s
+  fadd v26.4s,v26.4s,v26.4s
+  fadd v27.4s,v27.4s,v27.4s
+  fadd v28.4s,v28.4s,v28.4s
+  fadd v29.4s,v29.4s,v29.4s
+  fadd v30.4s,v30.4s,v30.4s
+  fadd v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, vecfadd128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1288,34 +1526,72 @@ _vecfmul128test:
 vecfmul128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 32
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
   ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecfmul128test_loop:
-  fmul v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fmul v19.4s, v19.4s, v19.4s
-  fmul v20.4s, v20.4s, v20.4s
-  fmul v21.4s, v21.4s, v21.4s
-  fmul v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fmul v19.4s, v19.4s, v19.4s
-  fmul v20.4s, v20.4s, v20.4s
-  fmul v21.4s, v21.4s, v21.4s
-  fmul v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fmul v19.4s, v19.4s, v19.4s
-  fmul v20.4s, v20.4s, v20.4s
-  fmul v21.4s, v21.4s, v21.4s
-  fmul v16.4s, v16.4s, v16.4s
-  fmul v17.4s, v17.4s, v17.4s
+  fmul v0.4s,v0.4s,v0.4s
+  fmul v1.4s,v1.4s,v1.4s
+  fmul v2.4s,v2.4s,v2.4s
+  fmul v3.4s,v3.4s,v3.4s
+  fmul v4.4s,v4.4s,v4.4s
+  fmul v5.4s,v5.4s,v5.4s
+  fmul v6.4s,v6.4s,v6.4s
+  fmul v7.4s,v7.4s,v7.4s
+  fmul v8.4s,v8.4s,v8.4s
+  fmul v9.4s,v9.4s,v9.4s
+  fmul v10.4s,v10.4s,v10.4s
+  fmul v11.4s,v11.4s,v11.4s
+  fmul v12.4s,v12.4s,v12.4s
+  fmul v13.4s,v13.4s,v13.4s
+  fmul v14.4s,v14.4s,v14.4s
+  fmul v15.4s,v15.4s,v15.4s
+  fmul v16.4s,v16.4s,v16.4s
+  fmul v17.4s,v17.4s,v17.4s
+  fmul v18.4s,v18.4s,v18.4s
+  fmul v19.4s,v19.4s,v19.4s
+  fmul v20.4s,v20.4s,v20.4s
+  fmul v21.4s,v21.4s,v21.4s
+  fmul v22.4s,v22.4s,v22.4s
+  fmul v23.4s,v23.4s,v23.4s
+  fmul v24.4s,v24.4s,v24.4s
+  fmul v25.4s,v25.4s,v25.4s
+  fmul v26.4s,v26.4s,v26.4s
+  fmul v27.4s,v27.4s,v27.4s
+  fmul v28.4s,v28.4s,v28.4s
+  fmul v29.4s,v29.4s,v29.4s
+  fmul v30.4s,v30.4s,v30.4s
+  fmul v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, vecfmul128test_loop
   ldp x14, x15, [sp, #0x10]
@@ -1359,7 +1635,23 @@ _mixvecfaddfmul128test:
 mixvecfaddfmul128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
-  mov x14, 20
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -1368,27 +1660,79 @@ mixvecfaddfmul128test:
   ldr q21, [x1]
   ldr q22, [x1]
   ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 mixvecfaddfmul128test_loop:
-  fmul v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fmul v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fmul v22.4s, v22.4s, v22.4s
-  fadd v23.4s, v23.4s, v23.4s
-  fmul v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
-  fmul v20.4s, v20.4s, v20.4s
-  fadd v21.4s, v21.4s, v21.4s
-  fmul v22.4s, v22.4s, v22.4s
-  fadd v23.4s, v23.4s, v23.4s
-  fmul v16.4s, v16.4s, v16.4s
-  fadd v17.4s, v17.4s, v17.4s
-  fmul v18.4s, v18.4s, v18.4s
-  fadd v19.4s, v19.4s, v19.4s
+  fadd v0.4s,v0.4s,v0.4s
+  fadd v1.4s,v1.4s,v1.4s
+  fadd v2.4s,v2.4s,v2.4s
+  fadd v3.4s,v3.4s,v3.4s
+  fadd v4.4s,v4.4s,v4.4s
+  fadd v5.4s,v5.4s,v5.4s
+  fadd v6.4s,v6.4s,v6.4s
+  fadd v7.4s,v7.4s,v7.4s
+  fadd v8.4s,v8.4s,v8.4s
+  fadd v9.4s,v9.4s,v9.4s
+  fadd v10.4s,v10.4s,v10.4s
+  fadd v11.4s,v11.4s,v11.4s
+  fadd v12.4s,v12.4s,v12.4s
+  fadd v13.4s,v13.4s,v13.4s
+  fadd v14.4s,v14.4s,v14.4s
+  fadd v15.4s,v15.4s,v15.4s
+  fadd v16.4s,v16.4s,v16.4s
+  fadd v17.4s,v17.4s,v17.4s
+  fadd v18.4s,v18.4s,v18.4s
+  fadd v19.4s,v19.4s,v19.4s
+  fadd v20.4s,v20.4s,v20.4s
+  fadd v21.4s,v21.4s,v21.4s
+  fadd v22.4s,v22.4s,v22.4s
+  fadd v23.4s,v23.4s,v23.4s
+  fadd v24.4s,v24.4s,v24.4s
+  fadd v25.4s,v25.4s,v25.4s
+  fadd v26.4s,v26.4s,v26.4s
+  fadd v27.4s,v27.4s,v27.4s
+  fadd v28.4s,v28.4s,v28.4s
+  fadd v29.4s,v29.4s,v29.4s
+  fadd v30.4s,v30.4s,v30.4s
+  fadd v31.4s,v31.4s,v31.4s
+  fmul v0.4s,v0.4s,v0.4s
+  fmul v1.4s,v1.4s,v1.4s
+  fmul v2.4s,v2.4s,v2.4s
+  fmul v3.4s,v3.4s,v3.4s
+  fmul v4.4s,v4.4s,v4.4s
+  fmul v5.4s,v5.4s,v5.4s
+  fmul v6.4s,v6.4s,v6.4s
+  fmul v7.4s,v7.4s,v7.4s
+  fmul v8.4s,v8.4s,v8.4s
+  fmul v9.4s,v9.4s,v9.4s
+  fmul v10.4s,v10.4s,v10.4s
+  fmul v11.4s,v11.4s,v11.4s
+  fmul v12.4s,v12.4s,v12.4s
+  fmul v13.4s,v13.4s,v13.4s
+  fmul v14.4s,v14.4s,v14.4s
+  fmul v15.4s,v15.4s,v15.4s
+  fmul v16.4s,v16.4s,v16.4s
+  fmul v17.4s,v17.4s,v17.4s
+  fmul v18.4s,v18.4s,v18.4s
+  fmul v19.4s,v19.4s,v19.4s
+  fmul v20.4s,v20.4s,v20.4s
+  fmul v21.4s,v21.4s,v21.4s
+  fmul v22.4s,v22.4s,v22.4s
+  fmul v23.4s,v23.4s,v23.4s
+  fmul v24.4s,v24.4s,v24.4s
+  fmul v25.4s,v25.4s,v25.4s
+  fmul v26.4s,v26.4s,v26.4s
+  fmul v27.4s,v27.4s,v27.4s
+  fmul v28.4s,v28.4s,v28.4s
+  fmul v29.4s,v29.4s,v29.4s
+  fmul v30.4s,v30.4s,v30.4s
+  fmul v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, mixvecfaddfmul128test_loop
   ldp x14, x15, [sp, #0x10]
