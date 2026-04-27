@@ -12,3 +12,4 @@ Current progress (on an Cortex-X2):
 | Mix FADD/FMUL  | 3.80         | 2.5          | 4               | 95           | 10/4 = 2.5; Interleaving helps slightly             |
 | Mix FADD/FMLA  | 3.91         | 2.5          | 4               | 98           | 10/4 = 2.5; Interleaving helps slightly             |
 | Mix FMUL/FMLA  | 3.72         | 2.5          | 4               | 93           | 10/4 = 2.5; Interleaving doesn't help            |
+| 2:1 mix Add/VAdd  | 5.78         | 4.22          | 6               | 96           | Unknown (latency?); needs 16 independent scalar registers; core width bottlenecked          |
