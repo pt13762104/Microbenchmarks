@@ -1969,7 +1969,7 @@ mixaddvecadd128test:
   stp x10, x11, [sp, #0x30]
   stp x8, x9, [sp, #0x40]
   mov x15, 1
-  mov x14, 30
+  mov x14, 24
   eor x13, x13, x13
   eor x12, x12, x12
   eor x11, x11, x11
@@ -1987,33 +1987,27 @@ mixaddvecadd128test:
 mixaddvecadd128test_loop:
   add x13, x13, x15
   add x12, x12, x15
+  add v16.4s, v16.4s, v16.4s
   add x11, x11, x15
   add x10, x10, x15
-  add v16.4s, v16.4s, v16.4s
   add v17.4s, v17.4s, v17.4s
   add x13, x13, x15
   add x12, x12, x15
+  add v18.4s, v18.4s, v18.4s
   add x11, x11, x15
   add x10, x10, x15
-  add v18.4s, v18.4s, v18.4s
   add v19.4s, v19.4s, v19.4s
   add x13, x13, x15
   add x12, x12, x15
+  add v20.4s, v20.4s, v20.4s
   add x11, x11, x15
   add x10, x10, x15
-  add v20.4s, v20.4s, v20.4s
   add v21.4s, v21.4s, v21.4s
   add x13, x13, x15
   add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
-  add v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  add x13, x13, x15
-  add x12, x12, x15
-  add x11, x11, x15
-  add x10, x10, x15
   add v22.4s, v22.4s, v22.4s
+  add x11, x11, x15
+  add x10, x10, x15
   add v23.4s, v23.4s, v23.4s
   sub x0, x0, x14
   cbnz x0, mixaddvecadd128test_loop
