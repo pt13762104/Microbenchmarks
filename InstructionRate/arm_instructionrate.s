@@ -738,33 +738,71 @@ vecadd128test:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
   mov x14, 20
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
   ldr q19, [x1]
   ldr q20, [x1]
   ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 vecadd128test_loop:
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  add v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  add v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  add v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  add v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  add v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  add v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
+  add v0.4s,v0.4s,v0.4s
+  add v1.4s,v1.4s,v1.4s
+  add v2.4s,v2.4s,v2.4s
+  add v3.4s,v3.4s,v3.4s
+  add v4.4s,v4.4s,v4.4s
+  add v5.4s,v5.4s,v5.4s
+  add v6.4s,v6.4s,v6.4s
+  add v7.4s,v7.4s,v7.4s
+  add v8.4s,v8.4s,v8.4s
+  add v9.4s,v9.4s,v9.4s
+  add v10.4s,v10.4s,v10.4s
+  add v11.4s,v11.4s,v11.4s
+  add v12.4s,v12.4s,v12.4s
+  add v13.4s,v13.4s,v13.4s
+  add v14.4s,v14.4s,v14.4s
+  add v15.4s,v15.4s,v15.4s
+  add v16.4s,v16.4s,v16.4s
+  add v17.4s,v17.4s,v17.4s
+  add v18.4s,v18.4s,v18.4s
+  add v19.4s,v19.4s,v19.4s
+  add v20.4s,v20.4s,v20.4s
+  add v21.4s,v21.4s,v21.4s
+  add v22.4s,v22.4s,v22.4s
+  add v23.4s,v23.4s,v23.4s
+  add v24.4s,v24.4s,v24.4s
+  add v25.4s,v25.4s,v25.4s
+  add v26.4s,v26.4s,v26.4s
+  add v27.4s,v27.4s,v27.4s
+  add v28.4s,v28.4s,v28.4s
+  add v29.4s,v29.4s,v29.4s
+  add v30.4s,v30.4s,v30.4s
+  add v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, vecadd128test_loop
   ldp x14, x15, [sp, #0x10]
