@@ -1892,69 +1892,69 @@ mixvecaddmul128test:
   ldr q31, [x1]
 mixvecaddmul128test_loop:
   add v0.4s,v0.4s,v0.4s
+  mul v31.4s,v31.4s,v31.4s
   add v1.4s,v1.4s,v1.4s
+  mul v30.4s,v30.4s,v30.4s
   add v2.4s,v2.4s,v2.4s
+  mul v29.4s,v29.4s,v29.4s
   add v3.4s,v3.4s,v3.4s
+  mul v28.4s,v28.4s,v28.4s
   add v4.4s,v4.4s,v4.4s
+  mul v27.4s,v27.4s,v27.4s
   add v5.4s,v5.4s,v5.4s
+  mul v26.4s,v26.4s,v26.4s
   add v6.4s,v6.4s,v6.4s
+  mul v25.4s,v25.4s,v25.4s
   add v7.4s,v7.4s,v7.4s
+  mul v24.4s,v24.4s,v24.4s
   add v8.4s,v8.4s,v8.4s
+  mul v23.4s,v23.4s,v23.4s
   add v9.4s,v9.4s,v9.4s
+  mul v22.4s,v22.4s,v22.4s
   add v10.4s,v10.4s,v10.4s
+  mul v21.4s,v21.4s,v21.4s
   add v11.4s,v11.4s,v11.4s
+  mul v20.4s,v20.4s,v20.4s
   add v12.4s,v12.4s,v12.4s
+  mul v19.4s,v19.4s,v19.4s
   add v13.4s,v13.4s,v13.4s
+  mul v18.4s,v18.4s,v18.4s
   add v14.4s,v14.4s,v14.4s
+  mul v17.4s,v17.4s,v17.4s
   add v15.4s,v15.4s,v15.4s
+  mul v16.4s,v16.4s,v16.4s
   add v16.4s,v16.4s,v16.4s
+  mul v15.4s,v15.4s,v15.4s
   add v17.4s,v17.4s,v17.4s
+  mul v14.4s,v14.4s,v14.4s
   add v18.4s,v18.4s,v18.4s
+  mul v13.4s,v13.4s,v13.4s
   add v19.4s,v19.4s,v19.4s
+  mul v12.4s,v12.4s,v12.4s
   add v20.4s,v20.4s,v20.4s
+  mul v11.4s,v11.4s,v11.4s
   add v21.4s,v21.4s,v21.4s
+  mul v10.4s,v10.4s,v10.4s
   add v22.4s,v22.4s,v22.4s
+  mul v9.4s,v9.4s,v9.4s
   add v23.4s,v23.4s,v23.4s
+  mul v8.4s,v8.4s,v8.4s
   add v24.4s,v24.4s,v24.4s
+  mul v7.4s,v7.4s,v7.4s
   add v25.4s,v25.4s,v25.4s
+  mul v6.4s,v6.4s,v6.4s
   add v26.4s,v26.4s,v26.4s
+  mul v5.4s,v5.4s,v5.4s
   add v27.4s,v27.4s,v27.4s
+  mul v4.4s,v4.4s,v4.4s
   add v28.4s,v28.4s,v28.4s
+  mul v3.4s,v3.4s,v3.4s
   add v29.4s,v29.4s,v29.4s
+  mul v2.4s,v2.4s,v2.4s
   add v30.4s,v30.4s,v30.4s
+  mul v1.4s,v1.4s,v1.4s
   add v31.4s,v31.4s,v31.4s
   mul v0.4s,v0.4s,v0.4s
-  mul v1.4s,v1.4s,v1.4s
-  mul v2.4s,v2.4s,v2.4s
-  mul v3.4s,v3.4s,v3.4s
-  mul v4.4s,v4.4s,v4.4s
-  mul v5.4s,v5.4s,v5.4s
-  mul v6.4s,v6.4s,v6.4s
-  mul v7.4s,v7.4s,v7.4s
-  mul v8.4s,v8.4s,v8.4s
-  mul v9.4s,v9.4s,v9.4s
-  mul v10.4s,v10.4s,v10.4s
-  mul v11.4s,v11.4s,v11.4s
-  mul v12.4s,v12.4s,v12.4s
-  mul v13.4s,v13.4s,v13.4s
-  mul v14.4s,v14.4s,v14.4s
-  mul v15.4s,v15.4s,v15.4s
-  mul v16.4s,v16.4s,v16.4s
-  mul v17.4s,v17.4s,v17.4s
-  mul v18.4s,v18.4s,v18.4s
-  mul v19.4s,v19.4s,v19.4s
-  mul v20.4s,v20.4s,v20.4s
-  mul v21.4s,v21.4s,v21.4s
-  mul v22.4s,v22.4s,v22.4s
-  mul v23.4s,v23.4s,v23.4s
-  mul v24.4s,v24.4s,v24.4s
-  mul v25.4s,v25.4s,v25.4s
-  mul v26.4s,v26.4s,v26.4s
-  mul v27.4s,v27.4s,v27.4s
-  mul v28.4s,v28.4s,v28.4s
-  mul v29.4s,v29.4s,v29.4s
-  mul v30.4s,v30.4s,v30.4s
-  mul v31.4s,v31.4s,v31.4s
   sub x0, x0, x14
   cbnz x0, mixvecaddmul128test_loop
   ldp x14, x15, [sp, #0x10]
