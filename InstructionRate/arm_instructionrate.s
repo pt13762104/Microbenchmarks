@@ -2279,21 +2279,34 @@ mix1to1addvecadd128test_loop:
 
 _mixmulvecmultest:
 mixmulvecmultest:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  mov x15, 2
-  mov x14, 20
-  mov x13, x15
-  mov x12, x15
-  mov x11, x15
-  mov x10, x15
-  mov x9, x15
-  mov x8, x15
-  mov x7, x15
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 1
+  mov x14, 64
+  eor x16,x16,x16
+  eor x17,x17,x17
+  eor x18,x18,x18
+  eor x19,x19,x19
+  eor x20,x20,x20
+  eor x21,x21,x21
+  eor x22,x22,x22
+  eor x23,x23,x23
+  eor x24,x24,x24
+  eor x25,x25,x25
+  eor x26,x26,x26
+  eor x27,x27,x27
+  eor x28,x28,x28
+  eor x29,x29,x29
+  eor x12,x12,x12
+  eor x13,x13,x13
   ldr q16, [x1]
   ldr q17, [x1]
   ldr q18, [x1]
@@ -2302,38 +2315,404 @@ mixmulvecmultest:
   ldr q21, [x1]
   ldr q22, [x1]
   ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
 mixmulvecmultest_loop:
-  mul w8, w8, w15
+  mul w12,w12,w15
   mul v16.4s, v16.4s, v16.4s
-  mul w9, w9, w15
+  mul w13,w13,w15
   mul v17.4s, v17.4s, v17.4s
-  mul w10, w10, w15
+  mul w16,w16,w15
   mul v18.4s, v18.4s, v18.4s
-  mul w11, w11, w15
+  mul w17,w17,w15
   mul v19.4s, v19.4s, v19.4s
-  mul w12, w12, w15
+  mul w18,w18,w15
   mul v20.4s, v20.4s, v20.4s
-  mul w8, w8, w15
+  mul w19,w19,w15
+  mul v21.4s, v21.4s, v21.4s
+  mul w20,w20,w15
+  mul v22.4s, v22.4s, v22.4s
+  mul w21,w21,w15
+  mul v23.4s, v23.4s, v23.4s
+  mul w22,w22,w15
+  mul v24.4s, v24.4s, v24.4s
+  mul w23,w23,w15
+  mul v25.4s, v25.4s, v25.4s
+  mul w24,w24,w15
+  mul v26.4s, v26.4s, v26.4s
+  mul w25,w25,w15
+  mul v27.4s, v27.4s, v27.4s
+  mul w26,w26,w15
+  mul v28.4s, v28.4s, v28.4s
+  mul w27,w27,w15
+  mul v29.4s, v29.4s, v29.4s
+  mul w28,w28,w15
+  mul v30.4s, v30.4s, v30.4s
+  mul w29,w29,w15
+  mul v31.4s, v31.4s, v31.4s
+  mul w12,w12,w15
   mul v16.4s, v16.4s, v16.4s
-  mul w9, w9, w15
+  mul w13,w13,w15
   mul v17.4s, v17.4s, v17.4s
-  mul w10, w10, w15
+  mul w16,w16,w15
   mul v18.4s, v18.4s, v18.4s
-  mul w11, w11, w15
+  mul w17,w17,w15
   mul v19.4s, v19.4s, v19.4s
-  mul w12, w12, w15
+  mul w18,w18,w15
   mul v20.4s, v20.4s, v20.4s
+  mul w19,w19,w15
+  mul v21.4s, v21.4s, v21.4s
+  mul w20,w20,w15
+  mul v22.4s, v22.4s, v22.4s
+  mul w21,w21,w15
+  mul v23.4s, v23.4s, v23.4s
+  mul w22,w22,w15
+  mul v24.4s, v24.4s, v24.4s
+  mul w23,w23,w15
+  mul v25.4s, v25.4s, v25.4s
+  mul w24,w24,w15
+  mul v26.4s, v26.4s, v26.4s
+  mul w25,w25,w15
+  mul v27.4s, v27.4s, v27.4s
+  mul w26,w26,w15
+  mul v28.4s, v28.4s, v28.4s
+  mul w27,w27,w15
+  mul v29.4s, v29.4s, v29.4s
+  mul w28,w28,w15
+  mul v30.4s, v30.4s, v30.4s
+  mul w29,w29,w15
+  mul v31.4s, v31.4s, v31.4s
   sub x0, x0, x14
   cbnz x0, mixmulvecmultest_loop
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0xa0
   ret
 
 _mixvecmulfmultest:
 mixvecmulfmultest:
+  sub sp, sp, #0x20
+  stp x14, x15, [sp, #0x10]
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x2]
+  ldr q2, [x1]
+  ldr q3, [x2]
+  ldr q4, [x1]
+  ldr q5, [x2]
+  ldr q6, [x1]
+  ldr q7, [x2]
+  ldr q8, [x1]
+  ldr q9, [x2]
+  ldr q10, [x1]
+  ldr q11, [x2]
+  ldr q12, [x1]
+  ldr q13, [x2]
+  ldr q14, [x1]
+  ldr q15, [x2]
+  ldr q16, [x1]
+  ldr q17, [x2]
+  ldr q18, [x1]
+  ldr q19, [x2]
+  ldr q20, [x1]
+  ldr q21, [x2]
+  ldr q22, [x1]
+  ldr q23, [x2]
+  ldr q24, [x1]
+  ldr q25, [x2]
+  ldr q26, [x1]
+  ldr q27, [x2]
+  ldr q28, [x1]
+  ldr q29, [x2]
+  ldr q30, [x1]
+  ldr q31, [x2]
+mixvecmulfmultest_loop:
+  fmul v0.4s,v0.4s,v0.4s
+  mul v31.4s,v31.4s,v31.4s
+  fmul v1.4s,v1.4s,v1.4s
+  mul v30.4s,v30.4s,v30.4s
+  fmul v2.4s,v2.4s,v2.4s
+  mul v29.4s,v29.4s,v29.4s
+  fmul v3.4s,v3.4s,v3.4s
+  mul v28.4s,v28.4s,v28.4s
+  fmul v4.4s,v4.4s,v4.4s
+  mul v27.4s,v27.4s,v27.4s
+  fmul v5.4s,v5.4s,v5.4s
+  mul v26.4s,v26.4s,v26.4s
+  fmul v6.4s,v6.4s,v6.4s
+  mul v25.4s,v25.4s,v25.4s
+  fmul v7.4s,v7.4s,v7.4s
+  mul v24.4s,v24.4s,v24.4s
+  fmul v8.4s,v8.4s,v8.4s
+  mul v23.4s,v23.4s,v23.4s
+  fmul v9.4s,v9.4s,v9.4s
+  mul v22.4s,v22.4s,v22.4s
+  fmul v10.4s,v10.4s,v10.4s
+  mul v21.4s,v21.4s,v21.4s
+  fmul v11.4s,v11.4s,v11.4s
+  mul v20.4s,v20.4s,v20.4s
+  fmul v12.4s,v12.4s,v12.4s
+  mul v19.4s,v19.4s,v19.4s
+  fmul v13.4s,v13.4s,v13.4s
+  mul v18.4s,v18.4s,v18.4s
+  fmul v14.4s,v14.4s,v14.4s
+  mul v17.4s,v17.4s,v17.4s
+  fmul v15.4s,v15.4s,v15.4s
+  mul v16.4s,v16.4s,v16.4s
+  fmul v16.4s,v16.4s,v16.4s
+  mul v15.4s,v15.4s,v15.4s
+  fmul v17.4s,v17.4s,v17.4s
+  mul v14.4s,v14.4s,v14.4s
+  fmul v18.4s,v18.4s,v18.4s
+  mul v13.4s,v13.4s,v13.4s
+  fmul v19.4s,v19.4s,v19.4s
+  mul v12.4s,v12.4s,v12.4s
+  fmul v20.4s,v20.4s,v20.4s
+  mul v11.4s,v11.4s,v11.4s
+  fmul v21.4s,v21.4s,v21.4s
+  mul v10.4s,v10.4s,v10.4s
+  fmul v22.4s,v22.4s,v22.4s
+  mul v9.4s,v9.4s,v9.4s
+  fmul v23.4s,v23.4s,v23.4s
+  mul v8.4s,v8.4s,v8.4s
+  fmul v24.4s,v24.4s,v24.4s
+  mul v7.4s,v7.4s,v7.4s
+  fmul v25.4s,v25.4s,v25.4s
+  mul v6.4s,v6.4s,v6.4s
+  fmul v26.4s,v26.4s,v26.4s
+  mul v5.4s,v5.4s,v5.4s
+  fmul v27.4s,v27.4s,v27.4s
+  mul v4.4s,v4.4s,v4.4s
+  fmul v28.4s,v28.4s,v28.4s
+  mul v3.4s,v3.4s,v3.4s
+  fmul v29.4s,v29.4s,v29.4s
+  mul v2.4s,v2.4s,v2.4s
+  fmul v30.4s,v30.4s,v30.4s
+  mul v1.4s,v1.4s,v1.4s
+  fmul v31.4s,v31.4s,v31.4s
+  mul v0.4s,v0.4s,v0.4s
+  sub x0, x0, x14
+  cbnz x0, mixvecmulfmultest_loop
+  ldp x14, x15, [sp, #0x10]
+  add sp, sp, #0x20
+  ret
+
+_mixvecaddfaddtest:
+mixvecaddfaddtest:
+  sub sp, sp, #0x20
+  stp x14, x15, [sp, #0x10]
+  mov x14, 64
+  ldr q0, [x1]
+  ldr q1, [x2]
+  ldr q2, [x1]
+  ldr q3, [x2]
+  ldr q4, [x1]
+  ldr q5, [x2]
+  ldr q6, [x1]
+  ldr q7, [x2]
+  ldr q8, [x1]
+  ldr q9, [x2]
+  ldr q10, [x1]
+  ldr q11, [x2]
+  ldr q12, [x1]
+  ldr q13, [x2]
+  ldr q14, [x1]
+  ldr q15, [x2]
+  ldr q16, [x1]
+  ldr q17, [x2]
+  ldr q18, [x1]
+  ldr q19, [x2]
+  ldr q20, [x1]
+  ldr q21, [x2]
+  ldr q22, [x1]
+  ldr q23, [x2]
+  ldr q24, [x1]
+  ldr q25, [x2]
+  ldr q26, [x1]
+  ldr q27, [x2]
+  ldr q28, [x1]
+  ldr q29, [x2]
+  ldr q30, [x1]
+  ldr q31, [x2]
+mixvecaddfaddtest_loop:
+  fadd v0.4s,v0.4s,v0.4s
+  add v31.4s,v31.4s,v31.4s
+  fadd v1.4s,v1.4s,v1.4s
+  add v30.4s,v30.4s,v30.4s
+  fadd v2.4s,v2.4s,v2.4s
+  add v29.4s,v29.4s,v29.4s
+  fadd v3.4s,v3.4s,v3.4s
+  add v28.4s,v28.4s,v28.4s
+  fadd v4.4s,v4.4s,v4.4s
+  add v27.4s,v27.4s,v27.4s
+  fadd v5.4s,v5.4s,v5.4s
+  add v26.4s,v26.4s,v26.4s
+  fadd v6.4s,v6.4s,v6.4s
+  add v25.4s,v25.4s,v25.4s
+  fadd v7.4s,v7.4s,v7.4s
+  add v24.4s,v24.4s,v24.4s
+  fadd v8.4s,v8.4s,v8.4s
+  add v23.4s,v23.4s,v23.4s
+  fadd v9.4s,v9.4s,v9.4s
+  add v22.4s,v22.4s,v22.4s
+  fadd v10.4s,v10.4s,v10.4s
+  add v21.4s,v21.4s,v21.4s
+  fadd v11.4s,v11.4s,v11.4s
+  add v20.4s,v20.4s,v20.4s
+  fadd v12.4s,v12.4s,v12.4s
+  add v19.4s,v19.4s,v19.4s
+  fadd v13.4s,v13.4s,v13.4s
+  add v18.4s,v18.4s,v18.4s
+  fadd v14.4s,v14.4s,v14.4s
+  add v17.4s,v17.4s,v17.4s
+  fadd v15.4s,v15.4s,v15.4s
+  add v16.4s,v16.4s,v16.4s
+  fadd v16.4s,v16.4s,v16.4s
+  add v15.4s,v15.4s,v15.4s
+  fadd v17.4s,v17.4s,v17.4s
+  add v14.4s,v14.4s,v14.4s
+  fadd v18.4s,v18.4s,v18.4s
+  add v13.4s,v13.4s,v13.4s
+  fadd v19.4s,v19.4s,v19.4s
+  add v12.4s,v12.4s,v12.4s
+  fadd v20.4s,v20.4s,v20.4s
+  add v11.4s,v11.4s,v11.4s
+  fadd v21.4s,v21.4s,v21.4s
+  add v10.4s,v10.4s,v10.4s
+  fadd v22.4s,v22.4s,v22.4s
+  add v9.4s,v9.4s,v9.4s
+  fadd v23.4s,v23.4s,v23.4s
+  add v8.4s,v8.4s,v8.4s
+  fadd v24.4s,v24.4s,v24.4s
+  add v7.4s,v7.4s,v7.4s
+  fadd v25.4s,v25.4s,v25.4s
+  add v6.4s,v6.4s,v6.4s
+  fadd v26.4s,v26.4s,v26.4s
+  add v5.4s,v5.4s,v5.4s
+  fadd v27.4s,v27.4s,v27.4s
+  add v4.4s,v4.4s,v4.4s
+  fadd v28.4s,v28.4s,v28.4s
+  add v3.4s,v3.4s,v3.4s
+  fadd v29.4s,v29.4s,v29.4s
+  add v2.4s,v2.4s,v2.4s
+  fadd v30.4s,v30.4s,v30.4s
+  add v1.4s,v1.4s,v1.4s
+  fadd v31.4s,v31.4s,v31.4s
+  add v0.4s,v0.4s,v0.4s
+  sub x0, x0, x14
+  cbnz x0, mixvecaddfaddtest_loop
+  ldp x14, x15, [sp, #0x10]
+  add sp, sp, #0x20
+  ret
+
+_mixjmpvecaddtest:
+mixjmpvecaddtest:
+  sub sp, sp, #0x20
+  stp x14, x15, [sp, #0x10]
+  mov x14, 48
+  ldr q0, [x1]
+  ldr q1, [x1]
+  ldr q2, [x1]
+  ldr q3, [x1]
+  ldr q4, [x1]
+  ldr q5, [x1]
+  ldr q6, [x1]
+  ldr q7, [x1]
+  ldr q8, [x1]
+  ldr q9, [x1]
+  ldr q10, [x1]
+  ldr q11, [x1]
+  ldr q12, [x1]
+  ldr q13, [x1]
+  ldr q14, [x1]
+  ldr q15, [x1]
+  ldr q16, [x1]
+  ldr q17, [x1]
+  ldr q18, [x1]
+  ldr q19, [x1]
+  ldr q20, [x1]
+  ldr q21, [x1]
+  ldr q22, [x1]
+  ldr q23, [x1]
+  ldr q24, [x1]
+  ldr q25, [x1]
+  ldr q26, [x1]
+  ldr q27, [x1]
+  ldr q28, [x1]
+  ldr q29, [x1]
+  ldr q30, [x1]
+  ldr q31, [x1]
+mixjmpvecaddtest_loop:
+  add v0.4s, v0.4s, v0.4s
+  add v1.4s, v1.4s, v1.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v2.4s, v2.4s, v2.4s
+  add v3.4s, v3.4s, v3.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v4.4s, v4.4s, v4.4s
+  add v5.4s, v5.4s, v5.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v6.4s, v6.4s, v6.4s
+  add v7.4s, v7.4s, v7.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v8.4s, v8.4s, v8.4s
+  add v9.4s, v9.4s, v9.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v10.4s, v10.4s, v10.4s
+  add v11.4s, v11.4s, v11.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v12.4s, v12.4s, v12.4s
+  add v13.4s, v13.4s, v13.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v14.4s, v14.4s, v14.4s
+  add v15.4s, v15.4s, v15.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v16.4s, v16.4s, v16.4s
+  add v17.4s, v17.4s, v17.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v18.4s, v18.4s, v18.4s
+  add v19.4s, v19.4s, v19.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v20.4s, v20.4s, v20.4s
+  add v21.4s, v21.4s, v21.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v22.4s, v22.4s, v22.4s
+  add v23.4s, v23.4s, v23.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v24.4s, v24.4s, v24.4s
+  add v25.4s, v25.4s, v25.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v26.4s, v26.4s, v26.4s
+  add v27.4s, v27.4s, v27.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v28.4s, v28.4s, v28.4s
+  add v29.4s, v29.4s, v29.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  add v30.4s, v30.4s, v30.4s
+  add v31.4s, v31.4s, v31.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  sub x0, x0, x14
+  cbnz x0, mixjmpvecaddtest_loop
+mixjmpvecaddtest_jellydonut:
+  ldp x14, x15, [sp, #0x10]
+  add sp, sp, #0x20
+  ret
+
+_mixjmpvecmultest:
+mixjmpvecmultest:
   sub sp, sp, #0x20
   stp x14, x15, [sp, #0x10]
   mov x14, 64
@@ -2369,194 +2748,71 @@ mixvecmulfmultest:
   ldr q29, [x1]
   ldr q30, [x1]
   ldr q31, [x1]
-mixvecmulfmultest_loop:
-  mul v0.4s,v0.4s,v0.4s
-  fmul v31.4s,v31.4s,v31.4s
-  mul v1.4s,v1.4s,v1.4s
-  fmul v30.4s,v30.4s,v30.4s
-  mul v2.4s,v2.4s,v2.4s
-  fmul v29.4s,v29.4s,v29.4s
-  mul v3.4s,v3.4s,v3.4s
-  fmul v28.4s,v28.4s,v28.4s
-  mul v4.4s,v4.4s,v4.4s
-  fmul v27.4s,v27.4s,v27.4s
-  mul v5.4s,v5.4s,v5.4s
-  fmul v26.4s,v26.4s,v26.4s
-  mul v6.4s,v6.4s,v6.4s
-  fmul v25.4s,v25.4s,v25.4s
-  mul v7.4s,v7.4s,v7.4s
-  fmul v24.4s,v24.4s,v24.4s
-  mul v8.4s,v8.4s,v8.4s
-  fmul v23.4s,v23.4s,v23.4s
-  mul v9.4s,v9.4s,v9.4s
-  fmul v22.4s,v22.4s,v22.4s
-  mul v10.4s,v10.4s,v10.4s
-  fmul v21.4s,v21.4s,v21.4s
-  mul v11.4s,v11.4s,v11.4s
-  fmul v20.4s,v20.4s,v20.4s
-  mul v12.4s,v12.4s,v12.4s
-  fmul v19.4s,v19.4s,v19.4s
-  mul v13.4s,v13.4s,v13.4s
-  fmul v18.4s,v18.4s,v18.4s
-  mul v14.4s,v14.4s,v14.4s
-  fmul v17.4s,v17.4s,v17.4s
-  mul v15.4s,v15.4s,v15.4s
-  fmul v16.4s,v16.4s,v16.4s
-  mul v16.4s,v16.4s,v16.4s
-  fmul v15.4s,v15.4s,v15.4s
-  mul v17.4s,v17.4s,v17.4s
-  fmul v14.4s,v14.4s,v14.4s
-  mul v18.4s,v18.4s,v18.4s
-  fmul v13.4s,v13.4s,v13.4s
-  mul v19.4s,v19.4s,v19.4s
-  fmul v12.4s,v12.4s,v12.4s
-  mul v20.4s,v20.4s,v20.4s
-  fmul v11.4s,v11.4s,v11.4s
-  mul v21.4s,v21.4s,v21.4s
-  fmul v10.4s,v10.4s,v10.4s
-  mul v22.4s,v22.4s,v22.4s
-  fmul v9.4s,v9.4s,v9.4s
-  mul v23.4s,v23.4s,v23.4s
-  fmul v8.4s,v8.4s,v8.4s
-  mul v24.4s,v24.4s,v24.4s
-  fmul v7.4s,v7.4s,v7.4s
-  mul v25.4s,v25.4s,v25.4s
-  fmul v6.4s,v6.4s,v6.4s
-  mul v26.4s,v26.4s,v26.4s
-  fmul v5.4s,v5.4s,v5.4s
-  mul v27.4s,v27.4s,v27.4s
-  fmul v4.4s,v4.4s,v4.4s
-  mul v28.4s,v28.4s,v28.4s
-  fmul v3.4s,v3.4s,v3.4s
-  mul v29.4s,v29.4s,v29.4s
-  fmul v2.4s,v2.4s,v2.4s
-  mul v30.4s,v30.4s,v30.4s
-  fmul v1.4s,v1.4s,v1.4s
-  mul v31.4s,v31.4s,v31.4s
-  fmul v0.4s,v0.4s,v0.4s
-  sub x0, x0, x14
-  cbnz x0, mixvecmulfmultest_loop
-  ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x20
-  ret
-
-_mixvecaddfaddtest:
-mixvecaddfaddtest:
-  sub sp, sp, #0x20
-  stp x14, x15, [sp, #0x10]
-  mov x14, 20
-  ldr q16, [x1]
-  ldr q17, [x2]
-  ldr q18, [x1]
-  ldr q19, [x2]
-  ldr q20, [x1]
-  ldr q21, [x2]
-mixvecaddfaddtest_loop:
-  fadd v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  fadd v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  fadd v20.4s, v20.4s, v20.4s
-  add v21.4s, v21.4s, v21.4s
-  fadd v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  sub x0, x0, x14
-  cbnz x0, mixvecaddfaddtest_loop
-  ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x20
-  ret
-
-_mixjmpvecaddtest:
-mixjmpvecaddtest:
-  sub sp, sp, #0x20
-  stp x14, x15, [sp, #0x10]
-  mov x14, 30
-  ldr q16, [x1]
-  ldr q17, [x1]
-  ldr q18, [x1]
-  ldr q19, [x1]
-  ldr q20, [x1]
-mixjmpvecaddtest_loop:
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v20.4s, v20.4s, v20.4s
-  add v16.4s, v16.4s, v16.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v17.4s, v17.4s, v17.4s
-  add v18.4s, v18.4s, v18.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v19.4s, v19.4s, v19.4s
-  add v20.4s, v20.4s, v20.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v16.4s, v16.4s, v16.4s
-  add v17.4s, v17.4s, v17.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v18.4s, v18.4s, v18.4s
-  add v19.4s, v19.4s, v19.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v20.4s, v20.4s, v20.4s
-  add v16.4s, v16.4s, v16.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v17.4s, v17.4s, v17.4s
-  add v18.4s, v18.4s, v18.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  add v19.4s, v19.4s, v19.4s
-  add v20.4s, v20.4s, v20.4s
-  cbz x0, mixjmpvecaddtest_jellydonut
-  sub x0, x0, x14
-  cbnz x0, mixjmpvecaddtest_loop
-mixjmpvecaddtest_jellydonut:
-  ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x20
-  ret
-
-_mixjmpvecmultest:
-mixjmpvecmultest:
-  sub sp, sp, #0x20
-  stp x14, x15, [sp, #0x10]
-  mov x14, 20
-  ldr q16, [x1]
-  ldr q17, [x1]
-  ldr q18, [x1]
-  ldr q19, [x1]
-  ldr q20, [x1]
 mixjmpvecmultest_loop:
+  mul v0.4s, v0.4s, v0.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v1.4s, v1.4s, v1.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v2.4s, v2.4s, v2.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v3.4s, v3.4s, v3.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v4.4s, v4.4s, v4.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v5.4s, v5.4s, v5.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v6.4s, v6.4s, v6.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v7.4s, v7.4s, v7.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v8.4s, v8.4s, v8.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v9.4s, v9.4s, v9.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v10.4s, v10.4s, v10.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v11.4s, v11.4s, v11.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v12.4s, v12.4s, v12.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v13.4s, v13.4s, v13.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v14.4s, v14.4s, v14.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v15.4s, v15.4s, v15.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
   mul v16.4s, v16.4s, v16.4s
-  cbz x0, mixjmpvecmultest_jellydonut
+  cbz x0, mixjmpvecaddtest_jellydonut
   mul v17.4s, v17.4s, v17.4s
-  cbz x0, mixjmpvecmultest_jellydonut
+  cbz x0, mixjmpvecaddtest_jellydonut
   mul v18.4s, v18.4s, v18.4s
-  cbz x0, mixjmpvecmultest_jellydonut
+  cbz x0, mixjmpvecaddtest_jellydonut
   mul v19.4s, v19.4s, v19.4s
-  cbz x0, mixjmpvecmultest_jellydonut
+  cbz x0, mixjmpvecaddtest_jellydonut
   mul v20.4s, v20.4s, v20.4s
-  cbz x0, mixjmpvecmultest_jellydonut
-  mul v16.4s, v16.4s, v16.4s
-  cbz x0, mixjmpvecmultest_jellydonut
-  mul v17.4s, v17.4s, v17.4s
-  cbz x0, mixjmpvecmultest_jellydonut
-  mul v18.4s, v18.4s, v18.4s
-  cbz x0, mixjmpvecmultest_jellydonut
-  mul v19.4s, v19.4s, v19.4s
-  cbz x0, mixjmpvecmultest_jellydonut
-  mul v20.4s, v20.4s, v20.4s
-  cbz x0, mixjmpvecmultest_jellydonut
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v21.4s, v21.4s, v21.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v22.4s, v22.4s, v22.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v23.4s, v23.4s, v23.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v24.4s, v24.4s, v24.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v25.4s, v25.4s, v25.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v26.4s, v26.4s, v26.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v27.4s, v27.4s, v27.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v28.4s, v28.4s, v28.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v29.4s, v29.4s, v29.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v30.4s, v30.4s, v30.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
+  mul v31.4s, v31.4s, v31.4s
+  cbz x0, mixjmpvecaddtest_jellydonut
   sub x0, x0, x14
   cbnz x0, mixjmpvecmultest_loop
 mixjmpvecmultest_jellydonut:
