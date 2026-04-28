@@ -3732,70 +3732,70 @@ mixaesevecadd128test:
   ldr q31, [x1]
   mov x14, 64
 mixaesevecadd128test_loop:
-  aese v0.16b, v0.16b
-  add v31.4s,v31.4s,v31.4s
-  aese v1.16b, v1.16b
-  add v30.4s,v30.4s,v30.4s
-  aese v2.16b, v2.16b
-  add v29.4s,v29.4s,v29.4s
-  aese v3.16b, v3.16b
-  add v28.4s,v28.4s,v28.4s
-  aese v4.16b, v4.16b
-  add v27.4s,v27.4s,v27.4s
-  aese v5.16b, v5.16b
-  add v26.4s,v26.4s,v26.4s
-  aese v6.16b, v6.16b
-  add v25.4s,v25.4s,v25.4s
-  aese v7.16b, v7.16b
-  add v24.4s,v24.4s,v24.4s
-  aese v8.16b, v8.16b
-  add v23.4s,v23.4s,v23.4s
-  aese v9.16b, v9.16b
-  add v22.4s,v22.4s,v22.4s
-  aese v10.16b, v10.16b
-  add v21.4s,v21.4s,v21.4s
-  aese v11.16b, v11.16b
-  add v20.4s,v20.4s,v20.4s
-  aese v12.16b, v12.16b
-  add v19.4s,v19.4s,v19.4s
-  aese v13.16b, v13.16b
-  add v18.4s,v18.4s,v18.4s
-  aese v14.16b, v14.16b
-  add v17.4s,v17.4s,v17.4s
-  aese v15.16b, v15.16b
-  add v16.4s,v16.4s,v16.4s
-  aese v16.16b, v16.16b
-  add v15.4s,v15.4s,v15.4s
-  aese v17.16b, v17.16b
-  add v14.4s,v14.4s,v14.4s
-  aese v18.16b, v18.16b
-  add v13.4s,v13.4s,v13.4s
-  aese v19.16b, v19.16b
-  add v12.4s,v12.4s,v12.4s
-  aese v20.16b, v20.16b
-  add v11.4s,v11.4s,v11.4s
-  aese v21.16b, v21.16b
-  add v10.4s,v10.4s,v10.4s
-  aese v22.16b, v22.16b
-  add v9.4s,v9.4s,v9.4s
-  aese v23.16b, v23.16b
-  add v8.4s,v8.4s,v8.4s
-  aese v24.16b, v24.16b
-  add v7.4s,v7.4s,v7.4s
-  aese v25.16b, v25.16b
-  add v6.4s,v6.4s,v6.4s
-  aese v26.16b, v26.16b
-  add v5.4s,v5.4s,v5.4s
-  aese v27.16b, v27.16b
-  add v4.4s,v4.4s,v4.4s
-  aese v28.16b, v28.16b
-  add v3.4s,v3.4s,v3.4s
-  aese v29.16b, v29.16b
-  add v2.4s,v2.4s,v2.4s
-  aese v30.16b, v30.16b
-  add v1.4s,v1.4s,v1.4s
-  aese v31.16b, v31.16b
   add v0.4s,v0.4s,v0.4s
+  aese v31.16b, v31.16b
+  add v1.4s,v1.4s,v1.4s
+  aese v30.16b, v30.16b
+  add v2.4s,v2.4s,v2.4s
+  aese v29.16b, v29.16b
+  add v3.4s,v3.4s,v3.4s
+  aese v28.16b, v28.16b
+  add v4.4s,v4.4s,v4.4s
+  aese v27.16b, v27.16b
+  add v5.4s,v5.4s,v5.4s
+  aese v26.16b, v26.16b
+  add v6.4s,v6.4s,v6.4s
+  aese v25.16b, v25.16b
+  add v7.4s,v7.4s,v7.4s
+  aese v24.16b, v24.16b
+  add v8.4s,v8.4s,v8.4s
+  aese v23.16b, v23.16b
+  add v9.4s,v9.4s,v9.4s
+  aese v22.16b, v22.16b
+  add v10.4s,v10.4s,v10.4s
+  aese v21.16b, v21.16b
+  add v11.4s,v11.4s,v11.4s
+  aese v20.16b, v20.16b
+  add v12.4s,v12.4s,v12.4s
+  aese v19.16b, v19.16b
+  add v13.4s,v13.4s,v13.4s
+  aese v18.16b, v18.16b
+  add v14.4s,v14.4s,v14.4s
+  aese v17.16b, v17.16b
+  add v15.4s,v15.4s,v15.4s
+  aese v16.16b, v16.16b
+  add v16.4s,v16.4s,v16.4s
+  aese v15.16b, v15.16b
+  add v17.4s,v17.4s,v17.4s
+  aese v14.16b, v14.16b
+  add v18.4s,v18.4s,v18.4s
+  aese v13.16b, v13.16b
+  add v19.4s,v19.4s,v19.4s
+  aese v12.16b, v12.16b
+  add v20.4s,v20.4s,v20.4s
+  aese v11.16b, v11.16b
+  add v21.4s,v21.4s,v21.4s
+  aese v10.16b, v10.16b
+  add v22.4s,v22.4s,v22.4s
+  aese v9.16b, v9.16b
+  add v23.4s,v23.4s,v23.4s
+  aese v8.16b, v8.16b
+  add v24.4s,v24.4s,v24.4s
+  aese v7.16b, v7.16b
+  add v25.4s,v25.4s,v25.4s
+  aese v6.16b, v6.16b
+  add v26.4s,v26.4s,v26.4s
+  aese v5.16b, v5.16b
+  add v27.4s,v27.4s,v27.4s
+  aese v4.16b, v4.16b
+  add v28.4s,v28.4s,v28.4s
+  aese v3.16b, v3.16b
+  add v29.4s,v29.4s,v29.4s
+  aese v2.16b, v2.16b
+  add v30.4s,v30.4s,v30.4s
+  aese v1.16b, v1.16b
+  add v31.4s,v31.4s,v31.4s
+  aese v0.16b, v0.16b
   sub x0, x0, x14
   cbnz x0, mixaesevecadd128test_loop
   add sp, sp, #0x50
@@ -3912,70 +3912,70 @@ mixpmulladd128test:
   ldr q31, [x1]
   mov x14, 64
 mixpmulladd128test_loop:
-  pmull v0.1q, v0.1d, v0.1d
-  add v31.4s,v31.4s,v31.4s
-  pmull v1.1q, v1.1d, v1.1d
-  add v30.4s,v30.4s,v30.4s
-  pmull v2.1q, v2.1d, v2.1d
-  add v29.4s,v29.4s,v29.4s
-  pmull v3.1q, v3.1d, v3.1d
-  add v28.4s,v28.4s,v28.4s
-  pmull v4.1q, v4.1d, v4.1d
-  add v27.4s,v27.4s,v27.4s
-  pmull v5.1q, v5.1d, v5.1d
-  add v26.4s,v26.4s,v26.4s
-  pmull v6.1q, v6.1d, v6.1d
-  add v25.4s,v25.4s,v25.4s
-  pmull v7.1q, v7.1d, v7.1d
-  add v24.4s,v24.4s,v24.4s
-  pmull v8.1q, v8.1d, v8.1d
-  add v23.4s,v23.4s,v23.4s
-  pmull v9.1q, v9.1d, v9.1d
-  add v22.4s,v22.4s,v22.4s
-  pmull v10.1q, v10.1d, v10.1d
-  add v21.4s,v21.4s,v21.4s
-  pmull v11.1q, v11.1d, v11.1d
-  add v20.4s,v20.4s,v20.4s
-  pmull v12.1q, v12.1d, v12.1d
-  add v19.4s,v19.4s,v19.4s
-  pmull v13.1q, v13.1d, v13.1d
-  add v18.4s,v18.4s,v18.4s
-  pmull v14.1q, v14.1d, v14.1d
-  add v17.4s,v17.4s,v17.4s
-  pmull v15.1q, v15.1d, v15.1d
-  add v16.4s,v16.4s,v16.4s
-  pmull v16.1q, v16.1d, v16.1d
-  add v15.4s,v15.4s,v15.4s
-  pmull v17.1q, v17.1d, v17.1d
-  add v14.4s,v14.4s,v14.4s
-  pmull v18.1q, v18.1d, v18.1d
-  add v13.4s,v13.4s,v13.4s
-  pmull v19.1q, v19.1d, v19.1d
-  add v12.4s,v12.4s,v12.4s
-  pmull v20.1q, v20.1d, v20.1d
-  add v11.4s,v11.4s,v11.4s
-  pmull v21.1q, v21.1d, v21.1d
-  add v10.4s,v10.4s,v10.4s
-  pmull v22.1q, v22.1d, v22.1d
-  add v9.4s,v9.4s,v9.4s
-  pmull v23.1q, v23.1d, v23.1d
-  add v8.4s,v8.4s,v8.4s
-  pmull v24.1q, v24.1d, v24.1d
-  add v7.4s,v7.4s,v7.4s
-  pmull v25.1q, v25.1d, v25.1d
-  add v6.4s,v6.4s,v6.4s
-  pmull v26.1q, v26.1d, v26.1d
-  add v5.4s,v5.4s,v5.4s
-  pmull v27.1q, v27.1d, v27.1d
-  add v4.4s,v4.4s,v4.4s
-  pmull v28.1q, v28.1d, v28.1d
-  add v3.4s,v3.4s,v3.4s
-  pmull v29.1q, v29.1d, v29.1d
-  add v2.4s,v2.4s,v2.4s
-  pmull v30.1q, v30.1d, v30.1d
-  add v1.4s,v1.4s,v1.4s
-  pmull v31.1q, v31.1d, v31.1d
   add v0.4s,v0.4s,v0.4s
+  pmull v31.1q, v31.1d, v31.1d
+  add v1.4s,v1.4s,v1.4s
+  pmull v30.1q, v30.1d, v30.1d
+  add v2.4s,v2.4s,v2.4s
+  pmull v29.1q, v29.1d, v29.1d
+  add v3.4s,v3.4s,v3.4s
+  pmull v28.1q, v28.1d, v28.1d
+  add v4.4s,v4.4s,v4.4s
+  pmull v27.1q, v27.1d, v27.1d
+  add v5.4s,v5.4s,v5.4s
+  pmull v26.1q, v26.1d, v26.1d
+  add v6.4s,v6.4s,v6.4s
+  pmull v25.1q, v25.1d, v25.1d
+  add v7.4s,v7.4s,v7.4s
+  pmull v24.1q, v24.1d, v24.1d
+  add v8.4s,v8.4s,v8.4s
+  pmull v23.1q, v23.1d, v23.1d
+  add v9.4s,v9.4s,v9.4s
+  pmull v22.1q, v22.1d, v22.1d
+  add v10.4s,v10.4s,v10.4s
+  pmull v21.1q, v21.1d, v21.1d
+  add v11.4s,v11.4s,v11.4s
+  pmull v20.1q, v20.1d, v20.1d
+  add v12.4s,v12.4s,v12.4s
+  pmull v19.1q, v19.1d, v19.1d
+  add v13.4s,v13.4s,v13.4s
+  pmull v18.1q, v18.1d, v18.1d
+  add v14.4s,v14.4s,v14.4s
+  pmull v17.1q, v17.1d, v17.1d
+  add v15.4s,v15.4s,v15.4s
+  pmull v16.1q, v16.1d, v16.1d
+  add v16.4s,v16.4s,v16.4s
+  pmull v15.1q, v15.1d, v15.1d
+  add v17.4s,v17.4s,v17.4s
+  pmull v14.1q, v14.1d, v14.1d
+  add v18.4s,v18.4s,v18.4s
+  pmull v13.1q, v13.1d, v13.1d
+  add v19.4s,v19.4s,v19.4s
+  pmull v12.1q, v12.1d, v12.1d
+  add v20.4s,v20.4s,v20.4s
+  pmull v11.1q, v11.1d, v11.1d
+  add v21.4s,v21.4s,v21.4s
+  pmull v10.1q, v10.1d, v10.1d
+  add v22.4s,v22.4s,v22.4s
+  pmull v9.1q, v9.1d, v9.1d
+  add v23.4s,v23.4s,v23.4s
+  pmull v8.1q, v8.1d, v8.1d
+  add v24.4s,v24.4s,v24.4s
+  pmull v7.1q, v7.1d, v7.1d
+  add v25.4s,v25.4s,v25.4s
+  pmull v6.1q, v6.1d, v6.1d
+  add v26.4s,v26.4s,v26.4s
+  pmull v5.1q, v5.1d, v5.1d
+  add v27.4s,v27.4s,v27.4s
+  pmull v4.1q, v4.1d, v4.1d
+  add v28.4s,v28.4s,v28.4s
+  pmull v3.1q, v3.1d, v3.1d
+  add v29.4s,v29.4s,v29.4s
+  pmull v2.1q, v2.1d, v2.1d
+  add v30.4s,v30.4s,v30.4s
+  pmull v1.1q, v1.1d, v1.1d
+  add v31.4s,v31.4s,v31.4s
+  pmull v0.1q, v0.1d, v0.1d
   sub x0, x0, x14
   cbnz x0, mixpmulladd128test_loop
   add sp, sp, #0x50
