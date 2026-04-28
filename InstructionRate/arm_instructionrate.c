@@ -209,7 +209,7 @@ int main(int argc, char *argv[]) {
   printf("64-bit mul per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mul32test));
   printf("64-bit multiply latency> %.2f clocks\n", 1 / measureFunction(iterations, clockSpeedGhz, latmul64test));
 
-  printf("\n----FP/ASIMD Crypto Tests----\n");
+  printf("\n----ASIMD Crypto Tests----\n");
   printf("aese per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, aesetestwrapper));
   printf("1:1 aese and vec 128 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixaesevecadd128wrapper));
   printf("pmull per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, pmullwrapper));
@@ -223,9 +223,9 @@ int main(int argc, char *argv[]) {
   printf("128-bit vec fp32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, vecfadd128wrapper));
   printf("128-bit vec fp32 multiply per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, vecfmul128wrapper));
   printf("128-bit vec fp32 mixed multiply and add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixvecfaddfmul128wrapper));
+  printf("1:1 mixed scalar adds and 128-bit vec int32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mix1to1addvecadd128wrapper));
   printf("2:1 mixed scalar adds and 128-bit vec int32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixaddvecadd128wrapper));
   printf("3:1 mixed scalar adds and 128-bit vec int32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mix3to1addvecadd128wrapper));
-  printf("1:1 mixed scalar adds and 128-bit vec int32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mix1to1addvecadd128wrapper));
   printf("1:1 mixed scalar 32-bit multiply and 128-bit vec int32 multiply per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixmulvecmulwrapper));
   printf("1:1 mixed 128-bit vec fp32 multiply and 128-bit vec int32 multiply per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixvecmulfmulwrapper));
   printf("1:1 mixed 128-bit vec fp32 add and 128-bit vec int32 add per clk> %.2f\n", measureFunction(iterationsHigh, clockSpeedGhz, mixvecaddfaddwrapper));
