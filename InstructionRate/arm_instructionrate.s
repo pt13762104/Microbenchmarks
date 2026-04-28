@@ -3732,70 +3732,70 @@ mixaesevecadd128test:
   ldr q31, [x1]
   mov x14, 64
 mixaesevecadd128test_loop:
-  aese v0.16b, v0.16b
   add v16.4s,v16.4s,v16.4s
-  aese v1.16b, v1.16b
+  aese v0.16b, v0.16b
   add v17.4s,v17.4s,v17.4s
-  aese v2.16b, v2.16b
+  aese v1.16b, v1.16b
   add v18.4s,v18.4s,v18.4s
-  aese v3.16b, v3.16b
+  aese v2.16b, v2.16b
   add v19.4s,v19.4s,v19.4s
-  aese v4.16b, v4.16b
+  aese v3.16b, v3.16b
   add v20.4s,v20.4s,v20.4s
-  aese v5.16b, v5.16b
+  aese v4.16b, v4.16b
   add v21.4s,v21.4s,v21.4s
-  aese v6.16b, v6.16b
+  aese v5.16b, v5.16b
   add v22.4s,v22.4s,v22.4s
-  aese v7.16b, v7.16b
+  aese v6.16b, v6.16b
   add v23.4s,v23.4s,v23.4s
-  aese v8.16b, v8.16b
+  aese v7.16b, v7.16b
   add v24.4s,v24.4s,v24.4s
-  aese v9.16b, v9.16b
+  aese v8.16b, v8.16b
   add v25.4s,v25.4s,v25.4s
-  aese v10.16b, v10.16b
+  aese v9.16b, v9.16b
   add v26.4s,v26.4s,v26.4s
-  aese v11.16b, v11.16b
+  aese v10.16b, v10.16b
   add v27.4s,v27.4s,v27.4s
-  aese v12.16b, v12.16b
+  aese v11.16b, v11.16b
   add v28.4s,v28.4s,v28.4s
-  aese v13.16b, v13.16b
+  aese v12.16b, v12.16b
   add v29.4s,v29.4s,v29.4s
-  aese v14.16b, v14.16b
+  aese v13.16b, v13.16b
   add v30.4s,v30.4s,v30.4s
-  aese v15.16b, v15.16b
+  aese v14.16b, v14.16b
   add v31.4s,v31.4s,v31.4s
-  aese v16.16b, v16.16b
+  aese v15.16b, v15.16b
   add v0.4s,v0.4s,v0.4s
-  aese v17.16b, v17.16b
+  aese v16.16b, v16.16b
   add v1.4s,v1.4s,v1.4s
-  aese v18.16b, v18.16b
+  aese v17.16b, v17.16b
   add v2.4s,v2.4s,v2.4s
-  aese v19.16b, v19.16b
+  aese v18.16b, v18.16b
   add v3.4s,v3.4s,v3.4s
-  aese v20.16b, v20.16b
+  aese v19.16b, v19.16b
   add v4.4s,v4.4s,v4.4s
-  aese v21.16b, v21.16b
+  aese v20.16b, v20.16b
   add v5.4s,v5.4s,v5.4s
-  aese v22.16b, v22.16b
+  aese v21.16b, v21.16b
   add v6.4s,v6.4s,v6.4s
-  aese v23.16b, v23.16b
+  aese v22.16b, v22.16b
   add v7.4s,v7.4s,v7.4s
-  aese v24.16b, v24.16b
+  aese v23.16b, v23.16b
   add v8.4s,v8.4s,v8.4s
-  aese v25.16b, v25.16b
+  aese v24.16b, v24.16b
   add v9.4s,v9.4s,v9.4s
-  aese v26.16b, v26.16b
+  aese v25.16b, v25.16b
   add v10.4s,v10.4s,v10.4s
-  aese v27.16b, v27.16b
+  aese v26.16b, v26.16b
   add v11.4s,v11.4s,v11.4s
-  aese v28.16b, v28.16b
+  aese v27.16b, v27.16b
   add v12.4s,v12.4s,v12.4s
-  aese v29.16b, v29.16b
+  aese v28.16b, v28.16b
   add v13.4s,v13.4s,v13.4s
-  aese v30.16b, v30.16b
+  aese v29.16b, v29.16b
   add v14.4s,v14.4s,v14.4s
-  aese v31.16b, v31.16b
+  aese v30.16b, v30.16b
   add v15.4s,v15.4s,v15.4s
+  aese v31.16b, v31.16b
   sub x0, x0, x14
   cbnz x0, mixaesevecadd128test_loop
   add sp, sp, #0x50
