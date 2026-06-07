@@ -3503,52 +3503,52 @@ mixaddjmp21test:
 mixaddjmp21test_loop:
   add x12,x12,x15
   add x13,x13,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x16,x16,x15
   add x17,x17,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x18,x18,x15
   add x19,x19,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x20,x20,x15
   add x21,x21,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x22,x22,x15
   add x23,x23,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x24,x24,x15
   add x25,x25,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x26,x26,x15
   add x27,x27,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x28,x28,x15
   add x29,x29,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x12,x12,x15
   add x13,x13,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x16,x16,x15
   add x17,x17,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x18,x18,x15
   add x19,x19,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x20,x20,x15
   add x21,x21,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x22,x22,x15
   add x23,x23,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x24,x24,x15
   add x25,x25,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x26,x26,x15
   add x27,x27,x15
-  cbz x0, mixaddjmp21test_jellydonut
   add x28,x28,x15
   add x29,x29,x15
-  cbz x0, mixaddjmp21test_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
+  cbz x0, mixmuljmptest_jellydonut
   sub x0, x0, x14
   cbnz x0, mixaddjmp21test_loop
 mixaddjmp21test_jellydonut:
