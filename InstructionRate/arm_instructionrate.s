@@ -3471,50 +3471,82 @@ mixmulrortest_loop:
   add sp, sp, #0x80
   ret
 
+
 _rortest:
 rortest:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 32
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x14, 20
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 rortest_loop:
-  ror x10, x10, 1
-  ror x11, x11, 1
   ror x12, x12, 1
   ror x13, x13, 1
-  ror x9, x9, 1
-  ror x8, x8, 1
-  ror x10, x10, 1
-  ror x11, x11, 1
+  ror x16, x16, 1
+  ror x17, x17, 1
+  ror x18, x18, 1
+  ror x19, x19, 1
+  ror x20, x20, 1
+  ror x21, x21, 1
+  ror x22, x22, 1
+  ror x23, x23, 1
+  ror x24, x24, 1
+  ror x25, x25, 1
+  ror x26, x26, 1
+  ror x27, x27, 1
+  ror x28, x28, 1
+  ror x29, x29, 1
   ror x12, x12, 1
   ror x13, x13, 1
-  ror x10, x10, 1
-  ror x11, x11, 1
-  ror x12, x12, 1
-  ror x13, x13, 1
-  ror x9, x9, 1
-  ror x8, x8, 1
-  ror x10, x10, 1
-  ror x11, x11, 1
-  ror x12, x12, 1
-  ror x13, x13, 1
+  ror x16, x16, 1
+  ror x17, x17, 1
+  ror x18, x18, 1
+  ror x19, x19, 1
+  ror x20, x20, 1
+  ror x21, x21, 1
+  ror x22, x22, 1
+  ror x23, x23, 1
+  ror x24, x24, 1
+  ror x25, x25, 1
+  ror x26, x26, 1
+  ror x27, x27, 1
+  ror x28, x28, 1
+  ror x29, x29, 1
   sub x0, x0, x14
   cbnz x0, rortest_loop
-rortest_jellydonut:
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0xa0
   ret
 
 _depmovtest:
