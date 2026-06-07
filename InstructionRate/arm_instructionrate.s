@@ -3219,108 +3219,178 @@ fusejmptest_jellydonut:
   add sp, sp, #0x20
   ret
 
+
 _mixmuljmptest:
 mixmuljmptest:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 32
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x14, 20
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 mixmuljmptest_loop:
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
-  mul x9, x9, x15
-  mul x8, x8, x15
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
+  mul w12,w12,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w13,w13,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w16,w16,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w17,w17,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w18,w18,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w19,w19,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w20,w20,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w21,w21,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w22,w22,w15
   cbz x0, mixmuljmptest_jellydonut
+  mul w23,w23,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w24,w24,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w25,w25,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w26,w26,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w27,w27,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w28,w28,w15
+  cbz x0, mixmuljmptest_jellydonut
+  mul w29,w29,w15
   cbz x0, mixmuljmptest_jellydonut
   sub x0, x0, x14
   cbnz x0, mixmuljmptest_loop
 mixmuljmptest_jellydonut:
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0xa0
   ret
 
 _mixmuljmptest21:
 mixmuljmptest21:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 48
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x14, 30
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 mixmuljmptest21_loop:
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
-  mul x9, x9, x15
-  mul x8, x8, x15
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
+  mul w12,w12,w15
+  mul w13,w13,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w16,w16,w15
+  mul w17,w17,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w18,w18,w15
+  mul w19,w19,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w20,w20,w15
+  mul w21,w21,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w22,w22,w15
+  mul w23,w23,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w24,w24,w15
+  mul w25,w25,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w26,w26,w15
+  mul w27,w27,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w28,w28,w15
+  mul w29,w29,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w12,w12,w15
+  mul w13,w13,w15
   cbz x0, mixmuljmptest21_jellydonut
+  mul w16,w16,w15
+  mul w17,w17,w15
   cbz x0, mixmuljmptest21_jellydonut
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
-  mul x9, x9, x15
-  mul x8, x8, x15
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
+  mul w18,w18,w15
+  mul w19,w19,w15
+  cbz x0, mixmuljmptest21_jellydonut
+  mul w20,w20,w15
+  mul w21,w21,w15
+  cbz x0, mixmuljmptest21_jellydonut
+  mul w22,w22,w15
+  mul w23,w23,w15
+  cbz x0, mixmuljmptest21_jellydonut
+  mul w24,w24,w15
+  mul w25,w25,w15
+  cbz x0, mixmuljmptest21_jellydonut
+  mul w26,w26,w15
+  mul w27,w27,w15
+  cbz x0, mixmuljmptest21_jellydonut
+  mul w28,w28,w15
+  mul w29,w29,w15
+  cbz x0, mixmuljmptest21_jellydonut
   sub x0, x0, x14
   cbnz x0, mixmuljmptest21_loop
 mixmuljmptest21_jellydonut:
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0xa0
   ret
-
 _mixaddjmptest:
 mixaddjmptest:
   sub sp, sp, #0x50
