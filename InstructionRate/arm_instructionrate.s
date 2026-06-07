@@ -3392,100 +3392,178 @@ mixmuljmptest21_jellydonut:
   add sp, sp, #0xa0
   ret
 
-
 _mixaddjmptest:
 mixaddjmptest:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 32
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x14, 20
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 mixaddjmptest_loop:
-  add x10, x10, x15
-  add x11, x11, x15
-  add x12, x12, x15
-  add x13, x13, x15
-  add x9, x9, x15
-  add x8, x8, x15
-  add x10, x10, x15
-  add x11, x11, x15
-  add x12, x12, x15
-  add x13, x13, x15
+  add x12,x12,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x13,x13,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x16,x16,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x17,x17,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x18,x18,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x19,x19,x15
   cbz x0, mixaddjmptest_jellydonut
+  add x20,x20,x15
   cbz x0, mixaddjmptest_jellydonut
-  cbz x0, mixmuljmptest_jellydonut
-  cbz x0, mixmuljmptest_jellydonut
-  cbz x0, mixmuljmptest_jellydonut
+  add x21,x21,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x22,x22,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x23,x23,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x24,x24,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x25,x25,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x26,x26,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x27,x27,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x28,x28,x15
+  cbz x0, mixaddjmptest_jellydonut
+  add x29,x29,x15
+  cbz x0, mixaddjmptest_jellydonut
   sub x0, x0, x14
-  cbnz x0, mixmuljmptest_loop
+  cbnz x0, mixaddjmptest_loop
 mixaddjmptest_jellydonut:
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50
+  add sp, sp, #0xa0
   ret
 
 _mixaddjmp21test:
 mixaddjmp21test:
-  sub sp, sp, #0x50
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40] 
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 48
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x14, 15
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 mixaddjmp21test_loop:
-  add x10, x10, x15
-  add x11, x11, x15
+  add x12,x12,x15
+  add x13,x13,x15
   cbz x0, mixaddjmp21test_jellydonut
-  
-  add x12, x12, x15
-  add x13, x13, x15
+  add x16,x16,x15
+  add x17,x17,x15
   cbz x0, mixaddjmp21test_jellydonut
-  
-  add x9, x9, x15
-  add x8, x8, x15
+  add x18,x18,x15
+  add x19,x19,x15
   cbz x0, mixaddjmp21test_jellydonut
-  
-  add x10, x10, x15
-  add x11, x11, x15
+  add x20,x20,x15
+  add x21,x21,x15
   cbz x0, mixaddjmp21test_jellydonut
-  
-  add x12, x12, x15
-  add x13, x13, x15
+  add x22,x22,x15
+  add x23,x23,x15
   cbz x0, mixaddjmp21test_jellydonut
-
+  add x24,x24,x15
+  add x25,x25,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x26,x26,x15
+  add x27,x27,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x28,x28,x15
+  add x29,x29,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x12,x12,x15
+  add x13,x13,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x16,x16,x15
+  add x17,x17,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x18,x18,x15
+  add x19,x19,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x20,x20,x15
+  add x21,x21,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x22,x22,x15
+  add x23,x23,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x24,x24,x15
+  add x25,x25,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x26,x26,x15
+  add x27,x27,x15
+  cbz x0, mixaddjmp21test_jellydonut
+  add x28,x28,x15
+  add x29,x29,x15
+  cbz x0, mixaddjmp21test_jellydonut
   sub x0, x0, x14
-  cmp x0, 0
-  b.gt mixaddjmp21test_loop
+  cbnz x0, mixaddjmp21test_loop
 mixaddjmp21test_jellydonut:
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x50 
+  add sp, sp, #0xa0
   ret
-
+  
 _mixmulrortest:
 mixmulrortest:
   sub sp, sp, #0xa0
