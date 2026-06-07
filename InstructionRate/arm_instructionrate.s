@@ -3416,60 +3416,81 @@ mixaddjmp21test_jellydonut:
 
 _mixmulrortest:
 mixmulrortest:
-  sub sp, sp, #0x80
+  sub sp, sp, #0xa0
   stp x14, x15, [sp, #0x10]
-  stp x12, x13, [sp, #0x20]
-  stp x10, x11, [sp, #0x30]
-  stp x8, x9, [sp, #0x40]
-  stp x19, x20, [sp, #0x50]
-  stp x21, x22, [sp, #0x60]
-  stp x23, x24, [sp, #0x70]
-  mov x8, 7
-  mov x9, 6
-  mov x10, 1
-  mov x11, 2
+  stp x16, x17, [sp, #0x20]
+  stp x18, x19, [sp, #0x30]
+  stp x20, x21, [sp, #0x40]
+  stp x22, x23, [sp, #0x50]
+  stp x24, x25, [sp, #0x60]
+  stp x26, x27, [sp, #0x70]
+  stp x28, x29, [sp, #0x80]
+  stp x12, x13, [sp, #0x90]
+  mov x15, 3
+  mov x14, 32
   mov x12, 3
-  mov x13, 4
-  mov x15, 5
-  mov x19, x8
-  mov x20, x8
-  mov x21, x8
-  mov x22, x8
-  mov x23, x8
-  mov x24, x8
-  mov x14, 20
+  mov x13, 3
+  mov x16, 3
+  mov x17, 3
+  mov x18, 3
+  mov x19, 3
+  mov x20, 3
+  mov x21, 3
+  mov x22, 3
+  mov x23, 3
+  mov x24, 3
+  mov x25, 3
+  mov x26, 3
+  mov x27, 3
+  mov x28, 3
+  mov x29, 3
 mixmulrortest_loop:
-  ror x24, x24, 1
-  ror x23, x23, 1
-  ror x22, x22, 1
-  ror x21, x21, 1
+  ror x12, x12, 1
+  mul w22, w22, w15
+  ror x13, x13, 1
+  mul w23, w23, w15
+  ror x16, x16, 1
+  mul w24, w24, w15
+  ror x17, x17, 1
+  mul w25, w25, w15
+  ror x18, x18, 1
+  mul w26, w26, w15
+  ror x19, x19, 1
+  mul w27, w27, w15
   ror x20, x20, 1
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
-  mul x9, x9, x15
-  ror x24, x24, 1
-  ror x23, x23, 1
-  ror x22, x22, 1
+  mul w28, w28, w15
   ror x21, x21, 1
+  mul w29, w29, w15
+  ror x12, x12, 1
+  mul w22, w22, w15
+  ror x13, x13, 1
+  mul w23, w23, w15
+  ror x16, x16, 1
+  mul w24, w24, w15
+  ror x17, x17, 1
+  mul w25, w25, w15
+  ror x18, x18, 1
+  mul w26, w26, w15
+  ror x19, x19, 1
+  mul w27, w27, w15
   ror x20, x20, 1
-  mul x8, x8, x15
-  mul x10, x10, x15
-  mul x11, x11, x15
-  mul x12, x12, x15
-  mul x13, x13, x15
+  mul w28, w28, w15
+  ror x21, x21, 1
+  mul w29, w29, w15
   sub x0, x0, x14
   cbnz x0, mixmulrortest_loop
-  ldp x23, x24, [sp, #0x70]
-  ldp x21, x22, [sp, #0x60]
-  ldp x19, x20, [sp, #0x50]
-  ldp x8, x9, [sp, #0x40]
-  ldp x10, x11, [sp, #0x30]
-  ldp x12, x13, [sp, #0x20]
+  ldp x12, x13, [sp, #0x90]
+  ldp x28, x29, [sp, #0x80]
+  ldp x26, x27, [sp, #0x70]
+  ldp x24, x25, [sp, #0x60]
+  ldp x22, x23, [sp, #0x50]
+  ldp x20, x21, [sp, #0x40]
+  ldp x18, x19, [sp, #0x30]
+  ldp x16, x17, [sp, #0x20]
   ldp x14, x15, [sp, #0x10]
-  add sp, sp, #0x80
+  add sp, sp, #0xa0
   ret
+
 
 
 _rortest:
